@@ -1,0 +1,41 @@
+﻿/*các xủ lý cho thẻ*/
+*{margin: 0;}
+
+
+body{
+	font: Normal 12px Arial, Tahoma;
+	color: #111;
+	text-align: center;
+}
+
+table{
+	font-size: 12px;
+	width: 100%;
+}
+
+th, td{
+	padding: 6px 2px;
+}
+
+th{
+background: #666;
+color: #fff;
+}
+a,a:visited{text-decoration:none;font:normal 12px Tahoma; }
+a:hover{text-decoration:underline;
+color:red;}
+
+ul{padding-left:20px;
+	
+}
+li{	padding:0 5px 0 5px; margin-bottom:5px;
+}
+
+.lc{
+font: bold 12px Tahoma;
+text-align: right;
+}
+
+.clr{
+	clear: both;
+}

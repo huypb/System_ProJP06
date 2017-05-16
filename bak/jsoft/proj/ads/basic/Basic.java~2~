@@ -1,0 +1,12 @@
+package jsoft.proj.ads.basic;
+import java.sql.*;
+
+public interface Basic {
+
+  public boolean add(PreparedStatement pre);
+  public boolean edit(PreparedStatement pre);
+  public boolean del(PreparedStatement pre);
+
+  public ResultSet get();
+
+}

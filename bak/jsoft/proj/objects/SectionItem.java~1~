@@ -1,0 +1,14 @@
+package jsoft.proj.objects;
+
+public class SectionItem {
+
+//sectionItem's properties
+  private short section_id;
+  private String section_name;
+
+
+  public SectionItem() {
+  }
+
+
+  }

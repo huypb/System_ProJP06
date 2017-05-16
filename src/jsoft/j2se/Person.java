@@ -1,0 +1,132 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class Person {
+  //constants
+  public static final String FIRSTNAME = "No FirstName";
+  public static final String LASTNAME = "No LastName";
+  public static final byte AGE = 0;
+  public static final Address ADDRESS = new Address();
+
+
+  //class variables
+  private static int count = 0;
+
+  //object's properties
+  private String firstName;
+  private String lastName;
+  private byte age;
+
+  private Address address;
+  //contructor methods
+  public Person() {
+    // Dac biet 1
+    //firstName = "No FristName";
+    //lastName = "No lastName";
+    //age = 0;
+    this(Person.FIRSTNAME, Person.LASTNAME, Person.AGE, Person.ADDRESS);
+  }
+
+  public Person(byte age) {
+    this(Person.FIRSTNAME, Person.LASTNAME, age, Person.ADDRESS);
+  }
+
+  public Person(String firstName, String lastName, byte age, Address address) {
+    //Dac biet 2 --> lam chuan
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    //this.address = address;
+    this.address = new Address(address);
+
+    Person.count++; //tang bien dem so doi tuong
+  }
+
+  public Person(String firstName, String lastName, byte age,
+                String cityName, String districtName, String streetName) {
+    this(firstName, lastName, age,
+         new Address(cityName, districtName, streetName));
+    // dac biet 4
+  }
+
+  // getter methods
+  public String getFristName() {
+    return this.firstName;
+  }
+
+  public String getLastName() {
+    return this.lastName;
+  }
+
+  public byte getAge() {
+    return this.age;
+  }
+
+  public Address getAddress() {
+    return this.address;
+  }
+
+  //setter methods
+  public Person setFristName(String firstName) {
+    this.firstName = firstName;
+    return this;
+  }
+
+  public Person setLastName(String lastName) {
+    this.lastName = lastName;
+    return this;
+  }
+
+  public Person setAge(byte age) {
+    this.age = age;
+    return this;
+  }
+
+  public Person setAddress(Address address) {
+    this.address = new Address(address);
+    return this;
+  }
+
+  public Person setAddress(String cityName, String districtName, String streetName) {
+    this.address = new Address(cityName, districtName, streetName);
+    return this;
+  }
+
+  //Other method
+
+  @Override
+public String toString() {
+    return firstName + " " + lastName + " " + age+ "\t"+this.address.toString();
+  }
+
+  public static int getCount() {
+    return Person.count;
+  }
+
+  @Override
+protected void finalize() throws Throwable {
+    Person.count--; //giam doi tuong
+    super.finalize();
+  }
+
+  public static void main(String[] args) {
+    Address addr = new Address("Ha Noi","Thanh Xuan","Nguyen Trai");
+
+    Person p3 = new Person("Huy", "Pham", (byte) 20, addr);
+    System.out.println(p3);
+
+    System.out.print("co tat ca: " + Person.getCount() + " doi tuong");
+
+  }
+}

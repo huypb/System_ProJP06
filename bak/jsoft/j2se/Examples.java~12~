@@ -1,0 +1,94 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class Examples {
+
+  /**
+   * This method is  used to find a <b>max value</b>
+   * @param n int
+   * @param m float
+   * @param ch char
+   * @return int
+   */
+  public int getMax(int n, float m, char ch) {
+    int max = n;
+
+    if (max < (int) m) {
+      max = (int) m;
+    }
+
+    if (max < ch) {
+      max = ch;
+    }
+    return max;
+  }
+
+  public static boolean checkElement(int n) {
+    boolean flag = true; // Coi nhu la nguyen to
+    if (n < 2) {
+      flag = false;
+    } else {
+      for (int v = 2; v <= (int) (Math.sqrt(n)); v++) {
+        if (n % v == 0) {
+          flag = false;
+          break;
+        }
+      }
+    }
+
+    return flag;
+  }
+
+  public static int getUCLN(int a, int b) {
+    int ucln = -1;
+    if (a * b != 0) {
+      while (a != b) {
+        if (a > b) {
+          a = a - b;
+        } else {
+          b = b - a;
+        }
+      }
+
+      // Nhan ket qua
+
+      ucln = a; // ucln = b;
+
+    }
+    return ucln;
+  }
+
+  public static void main(String[] args) {
+
+    int a = (int) (Math.random() * 100);
+    int b = (int) (Math.random() * 100);
+    System.out.print("UCLN cua a=" + a + " ,b=" + b + " la:");
+    System.out.print(Examples.getUCLN(a, b));
+
+    /*if (Examples.checkElement(n)) {
+      System.out.print("n=" + n + " la nguyen to");
+         } else {
+      System.out.print("n =" + n + " Khong la nguyen to");
+         } */
+
+    /*float m = (float) (Math.random() * 100);
+         char ch = 'j';
+
+         Examples ex = new Examples();
+
+         int max = ex.getMax(n, m, ch);
+
+         System.out.print("Gia tri lon nhat la = " + n); */
+  }
+}

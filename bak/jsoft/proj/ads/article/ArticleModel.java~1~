@@ -1,0 +1,60 @@
+package jsoft.proj.ads.article;
+
+import jsoft.proj.objects.*;
+import jsoft.proj.*;
+import java.util.*;
+import java.sql.*;
+
+public class ArticleModel {
+  
+  private Article a;
+  
+  public ArticleModel(ConnectionPool cp, String objectName) {
+    this.a = new ArticleImpl(cp,objectName);
+  }
+  
+  public void finalize(){
+    this.a = null;
+  }
+  
+  //chia se ket noi
+  public ConnectionPool getConnectionPool(){
+    return this.a.getConnectionPool();
+  }
+  
+  //yeu cau tra lai ket noi
+  public void releaseConnection(){
+    this.a.releaseConnection();
+  }
+  
+  //**************************************************
+  
+  public boolean addArticle(ArticleItem item){
+    return this.a.addArticle(item);
+  }
+  
+  public boolean editArticle(ArticleItem item){
+    return this.a.editArticle(item);
+  }
+  
+  public boolean delArticle(ArticleItem item){
+    return this.a.delArticle(item);
+  }
+  
+  //****************************************************
+  
+  public ArticleItem getArticleItem(int id){
+    
+    ArticleItem item = null;
+    
+    ResultSet rs = this.a.getArticle(id);
+    if(rs!=null){
+      if(rs.next()){
+        
+      }
+    }
+    return item;
+  }
+  
+  
+}

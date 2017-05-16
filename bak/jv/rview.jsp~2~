@@ -1,0 +1,101 @@
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<div class="rview">
+  <div class="title1" >
+    <a href="#">
+      <h3>Tin mới nhất</h3>
+    </a>
+  </div>
+
+  <div class="news">
+    <a href="#" onMouseOver="showtip(viewNews[1])" onMouseOut="hidetip()" ><h3>Báo Trung Quốc lên tiếng vụ “hớ” trước báo Mỹ</h3></a>
+    <a href="#" onMouseOver="showtip(viewNews2[1])" onMouseOut="hidetip()" ><h3>In hộ chiếu đường lưỡi bò là sai lầm và thiếu hiểu biết </h3></a>
+    <a href="#" onMouseOver="showtip(viewNews3[1])" onMouseOut="hidetip()" ><h3>Nhìn lại chiến thắng hủy diệt của Arsenal trước Tottenham</h3></a>
+    <a href="#"><h3>Nhớ nhé, cô giáo của ngày mai</h3></a>
+    <a href="#"><h3>Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm</h3></a>
+    <a href="#"><h3>Hàng đa cấp “chễm chệ” trong chợ Phú Lâm</h3></a>
+
+    <script language="JavaScript"  type="">
+    var viewNews = new Array();
+    viewNews[1] ="<table cellspacing=0>";
+    viewNews[1] +="<tr><th>";
+    viewNews[1] +="Báo Trung Quốc lên tiếng vụ “hớ” trước báo Mỹ ";
+    viewNews[1] +="</th></tr>";
+    viewNews[1] +="<tr><td>";
+    viewNews[1] +="<img src=\"/jv/pictures/my.jpg\" id=\"itt\" />";
+    viewNews[1] +="Một biên tập viên của tờ Nhân dân Nhật báo, tờ đưa lại bình chọn của tờ báo châm biếm Mỹ rằng nhà lãnh đạo Triều Tiên Kim Jong-un là “người đàn ông hấp dẫn nhất”, cho biết bài báo sẽ được gỡ xuống. ";
+    viewNews[1] +="</td></tr>";
+    viewNews[1] +="</table>";
+    </script>
+
+    <script language="JavaScript"  type="">
+    var viewNews2 = new Array();
+    viewNews2[1] ="<table cellspacing=0>";
+    viewNews2[1] +="<tr><th>";
+    viewNews2[1] +="In hộ chiếu đường lưỡi bò là sai lầm và thiếu hiểu biết ";
+    viewNews2[1] +="</th></tr>";
+    viewNews2[1] +="<tr><td>";
+    viewNews2[1] +="<img src=\"pictures/tq.jpg\" id=\"itt\" />";
+    viewNews2[1] +=" “Đường lưỡi bò” của Trung Quốc hoàn toàn không có cơ sở lịch sử và pháp lý. Việc in “đường lưỡi bò” lên hộ chiếu của Trung Quốc là hành động “sai lầm và thiếu hiểu biết” – nhiều đánh giá được đưa ra sau hội thảo Quốc tế Việt Nam học lần thứ 4. ";
+    viewNews2[1] +="</td></tr>";
+    viewNews2[1] +="</table>";
+    </script>
+
+    <script language="JavaScript"  type="">
+    var viewNews3 = new Array();
+    viewNews3[1] ="<table cellspacing=0>";
+    viewNews3[1] +="<tr><th>";
+    viewNews3[1] +="In hộ chiếu đường lưỡi bò là sai lầm và thiếu hiểu biết ";
+    viewNews3[1] +="</th></tr>";
+    viewNews3[1] +="<tr><td>";
+    viewNews3[1] +="<img src=\"/jv/pictures/tq.jpg\" id=\"itt\" />";
+    viewNews3[1] +=" “Đường lưỡi bò” của Trung Quốc hoàn toàn không có cơ sở lịch sử và pháp lý. Việc in “đường lưỡi bò” lên hộ chiếu của Trung Quốc là hành động “sai lầm và thiếu hiểu biết” – nhiều đánh giá được đưa ra sau hội thảo Quốc tế Việt Nam học lần thứ 4. ";
+    viewNews3[1] +="</td></tr>";
+    viewNews3[1] +="</table>";
+    </script>
+
+
+  </div>
+
+  <!--form slide show-->
+  <div id="slider-marquee" >
+    <!--hiệu ứng chạy từ dưới lên, delay 50s, chạy 2px/lần , di chuột vào thì dừng, bỏ chuột ra thì chạy-->
+    <marquee direction="up" scrolldelay="50" scrollamount="2" onMouseOver="stop()" onMouseOut="start()">
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"   alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+    </marquee>
+  </div>
+</div>

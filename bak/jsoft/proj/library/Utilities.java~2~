@@ -1,0 +1,15 @@
+package jsoft.proj.library;
+import net.htmlparser.jericho.*;
+
+public class Utilities {
+  public Utilities() {
+  }
+
+  public static String encode(String uniStr){
+    return CharacterReference.encode(uniStr);
+  }
+
+  public static String decode(String htmlStr){
+    return CharacterReference.decode(htmlStr);
+  }
+}

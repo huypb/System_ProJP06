@@ -1,0 +1,60 @@
+﻿/*Các xử lý định dạng cho Article*/
+.asummary{
+	text-align: justify;
+	padding: 5px 10px;
+	border-bottom: 1px solid #88f;
+	background: #efefef;
+}
+
+.asummary img{
+	width: 120px;
+	height: 100px;
+	float: left;
+	margin: 0 10px 5px 0;
+	padding: 2px;
+	border: 1px solid #ddd;
+}
+
+.asummary h3{
+	font: bold 14px Tahoma;
+}
+
+.asummary p{
+	line-height: 18px;
+	margin: 10px 0;
+}
+
+.readmore{
+	float: right;
+	font-style: italic;
+}
+
+.vtitle, .vsummary, .vcontent{
+	text-align: justify;
+
+}
+
+.vtitle{
+	font: bold 14px Tahoma;
+	color: #44f;
+	margin-top:15px;
+}
+
+.vsummary{
+	font: bold 12px Tahoma;
+	line-height: 20px;
+	margin: 10px 0;
+}
+
+.vcontent{
+	line-height: 18px;
+}
+
+.vcontent img{
+	width: 100%;
+	height:auto;
+}
+
+.vcontent{
+	margin: 5px 0;
+}

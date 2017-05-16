@@ -1,0 +1,6 @@
+package jsoft.proj.gui.article;
+
+public class ArticleControl {
+  public ArticleControl() {
+  }
+}

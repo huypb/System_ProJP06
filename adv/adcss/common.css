@@ -1,0 +1,54 @@
+﻿/*Các xử lý cho thẻ*/
+
+*{margin: 0px;}
+
+body{
+	font: Normal 12px Arial, Tahoma;
+	color: #111;
+	
+	text-align: center;
+}
+table{
+	font-size: 12px;
+	width: 100%;
+	
+}
+th, td{
+	padding: 6px 2px;
+	
+}
+th{
+	background: #666;
+	color: #fff;
+}
+
+a, a:visited{
+	text-decoration: none;
+}
+
+.lc{
+	font: bold 12px Tahoma;
+	text-align: right;
+}
+.clr{
+	clear: both;
+}
+
+.even{
+	background: #ddd;
+}
+
+.NO{
+	width: 50px;
+	font-weight: bold;
+	text-align:center;
+}
+
+.cname{
+	font: bold 12px Tahoma;
+}
+
+.ed{
+	text-align: center;
+	width: 40px;
+}

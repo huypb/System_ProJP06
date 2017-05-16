@@ -1,0 +1,102 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class Person {
+  //constants
+  public static final String FIRSTNAME = "No FirstName";
+  public static final String LASTNAME = "No LastName";
+  public static final byte AGE = 0;
+
+  //class variables
+  private static int count = 0;
+
+  //object's properties
+  private String firstName;
+  private String lastName;
+  private byte age;
+
+  //contructor methods
+  public Person() {
+    // Dac biet 1
+    //firstName = "No FristName";
+    //lastName = "No lastName";
+    //age = 0;
+    this(Person.FIRSTNAME,Person.LASTNAME,Person.AGE);
+  }
+
+  public Person(byte age) {
+    this(Person.FIRSTNAME, Person.LASTNAME, age);
+  }
+
+  public Person(String firstName, String lastName, byte age) {
+    //Dac biet 2
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+
+    Person.count++; //tang bien dem so doi tuong
+  }
+
+  // getter methods
+  public String getFristName() {
+    return this.firstName;
+  }
+
+  public String getLastName() {
+    return this.lastName;
+  }
+
+  public byte getAge() {
+    return this.age;
+  }
+
+  //setter methods
+  public Person setFristName(String firstName) {
+    this.firstName = firstName;
+    return this;
+  }
+
+  public Person setLastName(String lastName) {
+    this.lastName = lastName;
+    return this;
+  }
+
+  public Person setAge(byte age) {
+    this.age = age;
+    return this;
+  }
+
+  //Other method
+
+  public String toString() {
+    return firstName + " " + lastName + " " + age;
+  }
+
+  public static int getCount(){
+    return Person.count;
+  }
+
+  protected void finalize() throws Throwable{
+    Person.count--; //giam doi tuong
+    super.finalize();
+  }
+  public static void main(String[] args) {
+    Person p1 = new Person();
+    Person p2 = new Person((byte)20);
+    Person p3 = new Person("Huy","Pham",(byte)20);
+
+    System.out.print("co tat ca: "+Person.getCount()+" doi tuong");
+
+  }
+}

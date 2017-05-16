@@ -1,0 +1,10 @@
+[PropertyInfo]
+cityName,String,false,false, , ,true,<default>
+citytName,String,false,false, , ,true,<default>
+districtName,String,false,false, , ,true,<default>
+streetName,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

@@ -1,0 +1,7 @@
+package jsoft.proj.ads.article.category;
+
+
+public class CategoryControl {
+  public CategoryControl() {
+  }
+}

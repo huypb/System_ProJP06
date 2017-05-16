@@ -1,0 +1,9 @@
+package jsoft.proj.gui.article;
+import java.sql.*;
+import jsoft.proj.gui.basic.*;
+import jsoft.proj.objects.*;
+public interface Article {
+
+public ResultSet getArticle(int id);
+public ResultSet getArticle(ArticleItem similar, int at, byte total);
+}

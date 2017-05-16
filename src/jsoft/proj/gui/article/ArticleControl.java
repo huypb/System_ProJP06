@@ -1,0 +1,66 @@
+package jsoft.proj.gui.article;
+
+import jsoft.proj.*;
+import jsoft.proj.objects.*;
+
+import java.util.*;
+
+@SuppressWarnings("rawtypes")
+public class ArticleControl {
+
+	private ArticleModel am;
+
+	public ArticleControl(ConnectionPool cp) {
+		this.am = new ArticleModel(cp);
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		this.am = null;
+		super.finalize();
+	}
+
+	public ConnectionPool getConnectionPool() {
+		return this.am.getConnectionPool();
+	}
+
+	public void releaseConnection() {
+		this.am.releaseConnection();
+	}
+
+	// *************************************************************/
+
+	public String viewNewest(ArticleItem similar, byte total) {
+		ArrayList items = this.am.getArticleItems(similar, 1, total);
+
+		return ArticleLibrary.viewNewest(items);
+	}
+
+	public String viewFocus(ArticleItem similar, byte total) {
+		ArrayList items = this.am.getArticleItems(similar, 1, total);
+		return ArticleLibrary.viewFocus(items);
+	}
+
+	public String viewSections(ArticleItem similar, byte total, byte total_cate, String sec_name) {
+		ArrayList items = this.am.getArticleItems(similar, 1, total);
+		ArrayList cates = this.am.getCategories(similar, total_cate);
+
+		return ArticleLibrary.viewSections(items, cates, sec_name);
+	}
+
+	public String viewOfSection(ArticleItem similar, byte total, String sec_name) {
+		ArrayList items = this.am.getArticleItems(similar, 1, total);
+		return ArticleLibrary.viewOfSection(items, sec_name);
+	}
+
+	public String viewDetail(int aid) {
+		ArticleItem item = this.am.getArticleItem(aid);
+		return ArticleLibrary.viewDetail(item);
+	}
+
+	public String viewMarquee(ArticleItem similar, byte total, String sec_name) {
+		ArrayList items = this.am.getArticleItems(similar, 1, total);
+		return ArticleLibrary.viewMarquee(items, sec_name);
+	}
+
+}

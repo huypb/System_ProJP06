@@ -1,0 +1,6 @@
+package jsoft.proj.library;
+
+public class Utilities {
+  public Utilities() {
+  }
+}

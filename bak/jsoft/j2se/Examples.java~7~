@@ -1,0 +1,66 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class Examples {
+
+  /**
+   * This method is  used to find a <b>max value</b>
+   * @param n int
+   * @param m float
+   * @param ch char
+   * @return int
+   */
+  public int getMax(int n, float m, char ch) {
+    int max = n;
+
+    if (max < (int) m) {
+      max = (int) m;
+    }
+
+    if (max < ch) {
+      max = ch;
+    }
+    return max;
+  }
+
+  public static boolean checkElement(int n) {
+    boolean flag = true; // Coi nhu la nguyen to
+    if (n < 2) {
+      flag = false;
+    } else {
+      for (int v = 2; v <= (int) (Math.sqrt(n)); v++) {
+        if (n % v == 0) {
+          flag = false;
+          break;
+        }
+      }
+    }
+
+    return flag;
+  }
+
+
+  public static void main(String[] args) {
+
+    int n = (int) (Math.random() * 100);
+    float m = (float) (Math.random() * 100);
+    char ch = 'j';
+
+    Examples ex = new Examples();
+
+    int max = ex.getMax(n, m, ch);
+
+    System.out.print("Gia tri lon nhat la = " + max);
+  }
+}

@@ -1,0 +1,36 @@
+package jsoft.proj.ads.user;
+
+import java.util.*;
+import jsoft.proj.*;
+import jsoft.proj.objects.*;
+
+public class UserControl {
+  private UserModel um;
+
+  public UserControl(ConnectionPool cp) {
+    this.um = new UserModel(cp);
+  }
+
+  protected void finalize() throws Throwable{
+    this.um = null;
+    super.finalize();
+  }
+
+  public ConnectionPool getConnectionPool(){
+    return this.um.getConnectionPoll();
+  }
+
+  public void releaseConnection(){
+    this.um.releaseConnection();
+  }
+
+  //******************************************
+
+   public UserItem getUserItem(int id){
+     return this.um.getUserItem(id);
+   }
+
+   public UserItem getUserItem(String username, String userpass){
+     return this.um.getUserItem(username, userpass);
+   }
+}

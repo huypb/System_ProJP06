@@ -1,0 +1,48 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class ManagerStudent extends Manager {
+
+
+
+
+  /**
+   * getAge
+   *
+   * @param name String
+   * @return byte
+   * @todo Implement this jsoft.j2se.Manager method
+   */
+  public byte getAge(String name) {
+    return (byte)(Math.random()*100);
+  }
+
+  /**
+   * getApplyYear
+   *
+   * @param name String
+   * @return int
+   * @todo Implement this jsoft.j2se.Manager method
+   */
+  public int getApplyYear(String name) {
+    return (int)(Math.random()*5);
+  }
+
+
+  public static void main(String[] args) {
+    Manager ms = new ManagerStudent();
+    System.out.println("ApplyYear: "+ms.getApplyYear("Huy"));
+    System.out.print("Age: "+ms.getAge("Huy"));
+  }
+}

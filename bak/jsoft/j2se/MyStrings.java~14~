@@ -1,0 +1,56 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class MyStrings {
+
+  // dem so ky tu co trong chuoi
+  public static int countChar(String str, char ch, boolean ignoreCase) {
+    if (ignoreCase) {
+      str = str.toLowerCase();
+      ch = Character.toLowerCase(ch);
+    }
+
+    int count = 0;
+    for (int i = 0; i < str.length(); i++) {
+      if (str.charAt(i) == ch) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+
+  //dem so tu trong chuoi
+  public static int countWord(String str) {
+
+    String tmp = str.trim();
+    // chuan hoa
+    while (tmp.indexOf("  ") != -1) {
+      tmp = tmp.replace("  ", " ");
+    }
+    return MyStrings.countChar(tmp, ' ', false) + 1;
+
+  }
+
+  public static void main(String[] args) {
+
+    String str = "         Hello     Everybody         ";
+    int count = MyStrings.countChar(str, 'e', false);
+    System.out.println("co tat ca " + count + " ky tu e");
+
+    int count1 = MyStrings.countWord(str);
+    System.out.println(" co " + count1 + " tu");
+
+  }
+}

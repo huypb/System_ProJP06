@@ -1,0 +1,41 @@
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
+<div class="sections">
+  <div class="title">
+    <div class="lcurr_title"></div>
+    <div class="curr_title"><h3>Giới thiệu</h3></div>
+    <div class="rcurr_title"></div>
+
+    <div class="links_title">
+      <a href="#">Cơ cấu tổ chức</a>&nbsp;|&nbsp;
+      <a href="#">Lĩnh vực hoạt động</a>&nbsp;|&nbsp;
+      <a href="#">Lịch sử</a>
+    </div>
+
+    <div class="clr"> </div>
+</div>
+
+<div class="sections_content">
+  <div class="sections_content_left">
+    <img src="/jv/pictures/noisoi.jpg" alt="" />
+    <a href="#" >Những kỹ thuật nội soi</a>
+    <p>
+    Trong đề tài “Cụm công trình nghiên cứu phẫu thuật nội soi trẻ em”
+    tham dự Giải thưởng Nhân tài đất Việt của GS.TS Nguyễn Thanh Liêm,
+    Giám đốc BV Nhi Trung ương, ông rất tâm đắc với nhiều kỹ thuật mới được thế giới đánh giá cao.
+    </p>
+  </div>
+
+  <div class="sections_content_right">
+    <ul>
+      <li><a href="#">Gần 3 năm trở qua, hễ ra ngoài hay ở nhà,</a></li>
+      <li><a href="#">Ferguson: "Norwich xứng đáng giành chiến thắng" </a></li>
+      <li><a href="#">Hà Nội: Ngã xuống hồ nước trong công viên, một cháu bé tử vong </a></li>
+      <li><a href="#">Căng thẳng “leo thang” xung quanh dự án cải tạo tập thể Nguyễn Công Trứ </a></li>
+    </ul>
+
+  </div>
+
+  <div class="clr"> </div>
+</div>
+</div>

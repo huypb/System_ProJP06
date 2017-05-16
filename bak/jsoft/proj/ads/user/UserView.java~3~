@@ -1,0 +1,75 @@
+package jsoft.proj.ads.user;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import java.util.*;
+import jsoft.proj.objects.*;
+import jsoft.proj.*;
+
+public class UserView extends HttpServlet {
+  private static final String CONTENT_TYPE = "text/html; charset=UTF-8";
+
+  //Initialize global variables
+  public void init() throws ServletException {
+  }
+
+  //Process the HTTP Get request
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    //tham chieu phien lam viec
+    HttpSession session = request.getSession();
+
+    //kiem tra thong tin dang nhap
+    UserItem user = (UserItem) session.getAttribute("userLogined");
+
+    if (user != null) {
+      view(request, response);
+    } else {
+      response.sendRedirect("/adv/user/login");
+    }
+
+  }
+
+  private void view(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    response.setContentType(CONTENT_TYPE);
+    PrintWriter out = response.getWriter();
+
+    //ghep header vao view
+    RequestDispatcher h = request.getRequestDispatcher("/header");
+    if (h != null) {
+      h.include(request, response);
+    }
+
+    ConnectionPool cp = (ConnectionPool) getServletContext().getAttribute("c_poll");
+    UserControl uc = new UserControl(cp);
+    if (cp == null) {
+      getServletContext().getAttribute("c_pool", uc.getConnectionPool());
+    }
+
+    //lay du lieu
+    String viewUsers = uc.viewUser(null, 1, (byte) 20);
+
+    //tra ve du lieu ket noi
+    uc.releaseConnection();
+
+    out.print("<div class=\"view\">");
+    out.print("<!--Noi dung thay doi-->");
+    out.print("</div><!--end view-->");
+
+    //ghep footer vao view
+    RequestDispatcher f = request.getRequestDispatcher("/footer");
+    if (f != null) {
+      f.include(request, response);
+    }
+
+  }
+
+  //Process the HTTP Post request
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    doGet(request, response);
+  }
+
+  //Clean up resources
+  public void destroy() {
+  }
+}

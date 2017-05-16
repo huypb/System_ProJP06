@@ -1,0 +1,14 @@
+package jsoft.proj.ads.article.category;
+
+import jsoft.proj.objects.*;
+import java.sql.*;
+
+public interface Category {
+
+  public boolean addCategory(CategoryItem item);
+  public boolean editCategory(CategoryItem item);
+  public boolean delCategory(CategoryItem item);
+
+  public ResultSet getCategory(short id);
+  public ResultSet getCategories(CategoryItem similar, int at, byte total);
+}

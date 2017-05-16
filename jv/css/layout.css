@@ -1,0 +1,274 @@
+﻿/*các xủ lý hiển thị cho DHLogistisc*/
+
+@import url('common.css');
+@import url('default.css');
+@import url('nivo-slider.css');
+@import url('tooltip.css');
+@import url('aview.css');
+.mainview{
+	width: 980px;
+	height:auto;
+	margin: 0 auto;
+}
+
+#search{
+	width:auto;
+	float:right;
+	padding: 5px 0 5px 0;
+	text-align:right;
+}
+
+#acc{
+	width:aotu;
+	padding:8px 10px 6px 0;
+	float:right;
+}
+.header{
+	height: 140px;
+	background: url('../images/banner_bg.jpg') no-repeat top center; /* phương thức vẽ: không lặp, vẽ từ trên xuống*/
+}
+
+.menu{
+	height:42px;
+	background:url('../images/menu_bg.jpg') repeat-x top;
+	margin: 5px 0;
+	text-align:left;
+}
+.menu a{ color:#fff;}
+.menu a:hover{ 
+	text-decoration:none; /* di chuột vào*/
+}
+
+.menu a h3{
+	font:bold 12px Tahoma;
+	width:auto;
+	float:left;
+	padding: 3px 20px 5px 20px;
+}
+
+.menu a h3:hover{
+	background:url('../images/menu_bg.jpg') repeat-x bottom;
+	color:#22f;
+}
+.content{
+	width:720px;
+	height:auto;
+	float:left;
+}
+
+.view{
+	width:460px;
+	height:auto;
+	float:left;
+}
+.intro{
+height:auto;
+
+}
+.focus{
+	height:auto;
+	margin: 5px 0;
+}
+.f3{
+	width:146px;
+	height:auto;	
+	float:left;
+}
+.f3 img{
+	width:146px;
+	height:120px
+}
+.f3 a h3{
+	font:normal 12px Tahoma;
+	line-height:20px;
+	margin-top:10px;
+}
+.sections{
+	height:auto;
+	margin-bottom:5px;
+}
+.title, .lcurr_title, .rcurr_title, .curr_title{
+	height:21px;
+}
+
+.title{
+	background: url('../images/title_bg.jpg') repeat-x;
+	text-align: left;
+}
+
+.lcurr_title{
+	width:6px;
+	background:url('../images/lcurr_title.jpg') no-repeat left;
+	float:left;
+}
+.rcurr_title{
+	width:13px;
+	background:url('../images/rcurr_title.jpg') no-repeat right;
+	float:left;
+}
+.curr_title{
+	width:auto;
+	background:url('../images/curr_title.jpg') repeat-x;
+	float:left;
+}
+.curr_title h3{
+	font: bold 12px Tahoma;
+	color:#fff;
+	padding: 4px 5px;
+}
+.links_title{
+	font:normal 12px Tahoma;
+	padding: 5px 0 4px 10px;
+	float:left;
+	text-align:left;
+}
+.sections_content{
+	height:auto;
+	border: 1px solid #aaa;
+	text-align:justify;
+
+}
+
+.sections_content_left{
+	width:250px;
+	height:200px;
+	float:left;
+	margin:5px 0 0 5px;
+	line-height:18px;
+	overflow:hidden;
+}
+.sections_content_left img{
+	width:120px;
+	height:100px;
+	float:left;
+	margin-right:5px;
+}
+.sections_content_left a{
+	font:bold 12px Tahoma;
+	color:red;
+}
+.sections_content_left p{
+	margin-top:10px;
+}
+.sections_content_right{
+	width:200px;
+	height:auto;
+	float:right;
+	padding-top:5px;
+}
+.sections_content_right ul{
+	font: normal 10px Tahoma;
+}
+.sections_content_right ul li a{
+	font-size:11px;
+}
+
+.rview{
+	width: 250px;
+	height:auto;
+	float:right;
+}
+
+.title1{
+	padding: 6px;
+	background:url('../images/title1_bg.jpg') repeat-x;
+}
+.title1 a{
+	text-decoration:none;
+}
+.title1 a:hover{
+	color:red;
+}
+.title1 a h3{
+	font:bold 12px Tahoma;
+	text-transform:uppercase;
+	color:#fff;
+}
+
+.news{
+	height:auto;
+	text-align:justify;
+	
+}
+.news a{
+	color: #666;
+}
+
+.news a h3{
+	font: bold 12px Tahoma;
+	margin:6px 0;
+	line-height:18px;
+}
+
+#slider-marquee{
+	text-align:justify;
+	background:#eee;
+	padding:5px;
+}
+#slider-marquee marquee{
+	height:250px;
+}
+#slider-marquee marquee img{
+	width:60px;
+	height:50px;
+	float:left;
+	margin:0 10px 10px 0;
+	border:0;
+}
+
+#slider-marquee marquee h3{
+	font:normal 12px Tahoma;
+	line-height:18px;
+	clear:left;
+	
+}
+.links{
+	height:auto;
+	margin-top:5px;
+}
+.rcontent{
+	width: 250px;
+	height:auto;
+	float:right;
+}
+#video{
+	margin-bottom:10px;
+}
+#support{
+	background:#ddd;
+	height:auto;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.sitem{
+	padding:5px;
+	border-bottom:1px solid #666;
+	text-align:left;
+	line-height:20px;
+	clear:left;
+	height:60px;
+}
+.sitem a img{
+	width:80px;
+	float:left;
+	margin-right:5px;
+	border:0;
+}
+#rcontent_advs{
+	border:1px solid #ddd;
+	height:300px;
+}
+.footer{
+	height: auto;
+	margin-top: 5px;
+	border-top:5px solid #0680c5;
+	padding:10px;
+  font: bold 12px Tahoma;
+}
+#menu-bottom{
+		margin-bottom:10px;
+}
+
+#menu-bottom a{
+	font: bold 12px Tahoma;
+}

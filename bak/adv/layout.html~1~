@@ -1,0 +1,47 @@
+﻿<html>
+	<head>
+		<title>Quản trị hệ thống</title>
+		<link href="adcss/layout.css" rel="stylesheet" type="text/css"  />
+		<script language="JavaScript" src="" ></script>
+	</head>
+
+	<body>
+		<div id="main">
+			<div id="logo"></div>
+		
+			<div id="acc">
+				<h3>Quyền quản trị</h3>
+				Tên đăng nhập: admin &nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">Thoát</a>
+			</div>
+			
+			<div class="clr"></div>
+			
+			<div class="menu">
+				<a href="#"><h3>Thống kê</h3></a>
+				<a href="#"><h3>Quản lý Người sử dụng</h3></a>
+				<a href="#"><h3>Quản lý Chuyên mục</h3></a>
+				<a href="#"><h3>Quản lý Thể loại</h3></a>
+				<a href="#"><h3>Quản lý Tin bài</h3></a>
+				<a href="#"><h3>Quản lý Hệ sản phẩm</h3></a>
+				<a href="#"><h3>Quản lý Nhóm sản phẩm</h3></a>
+				<a href="#"><h3>Quản lý Loại sản phẩm</h3></a>
+				<a href="#"><h3>Quản lý Sản phẩm</h3></a>
+				<a href="#"><h3>Quản lý Hóa đơn</h3></a>
+				<a href="#"><h3>Quản lý Khách hàng</h3></a>
+				<a href="#"><h3>Quản lý ...</h3></a>
+			</div><!--end menu-->
+			
+			<div class="view">
+				<!--Noi dung thay doi-->
+			</div><!--end view-->
+			
+			<div class="clr"></div>	
+			
+			<div id="footer">
+				This CMS is build by JP06 group.<br />
+				Develop on J2EE technology . @2013
+			</div>
+		</div>
+	</body>
+</html>

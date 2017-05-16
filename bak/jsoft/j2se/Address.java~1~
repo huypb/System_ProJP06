@@ -1,0 +1,42 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class Address {
+
+  // Constants
+  public static final String CITYNAME = "No CityName";
+  public static final String DISTRICTNAME = "No DistrictName";
+  public static final String STREETNAME = "No StreetName";
+
+  private String cityName;
+  private String districtName;
+  private String streetName;
+
+  //Constructor methods
+
+  public Address(){
+    this(Address.CITYNAME,Address.DISTRICTNAME,Address.STREETNAME);
+  }
+
+  public Address(String cityName,String districtName, String streetName){
+    this.cityName= cityName;
+    this.districtName= districtName;
+    this.streetName= streetName;
+  }
+
+
+  public static void main(String[] args) {
+
+  }
+}

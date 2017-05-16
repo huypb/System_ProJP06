@@ -1,0 +1,460 @@
+
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<html>
+<head>
+<title> Bản thiểt kế cho CDHlogistics</title>
+<link href="/jv/css/layout.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/jv/js/gui.js"  type=""></script>
+<script language="JavaScript" src="/jv/js/tooltip.js"  type=""></script>
+</head>
+
+<body onLoad="setFirstTime(document.frmsearch)"> <!--gọi javascript vào đúng form -->
+<div class="mainview">
+  <!--form tìm kiếm-->
+  <div id="search">
+    <form name="frmsearch" action="" method="POST">
+    <b>Tìm kiếm</b>                                 <!-- bắt sự kiện click chuột-->
+    <input type="text" sixe="20" name="txtKeyword" onClick="setKeyword(this.form, true)" onBlur="setKeyword(this.form, false)" />
+    <input type="button" value=">>" onClick="checkKeyword(this.form)"/>
+    </form>
+  </div>
+  <!-- form đăng nhập-->
+  <div id="acc" >
+    <a href="#">Đăng nhập</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#">Đăng ký</a>
+  </div>
+
+  <!--xóa lên trên và sang trái-->
+  <div class="clr"></div>
+
+  <div class="header"></div>
+
+  <!--form menu-->
+  <div class="menu">
+    <a href="#"><h3>Trang chủ</h3></a>
+    <a href="#"><h3>Giới thiệu</h3></a>
+    <a href="#"><h3>Sản phẩm</h3></a>
+    <a href="#"><h3>Khách hàng</h3></a>
+    <a href="#"><h3>Tin tức</h3></a>
+    <a href="#"><h3>Hỗ trợ</h3></a>
+    <a href="#"><h3>Liên hệ</h3></a>
+  </div>
+
+  <!--form nội dung-->
+  <div class="content">
+    <div class="view">
+      <div class="intro">
+
+        <div class="slider-wrapper theme-default">
+          <div id="slider" class="nivoSlider">
+            <a href="#"><img src="/jv/pictures/intros/toystory.jpg" alt="" title="Giá xăng 'làm giá' đến bao giờ" /></a>
+            <a href="#"><img src="/jv/pictures/intros/up.jpg"  alt=""  /></a>
+            <a href="#"><img src="/jv/pictures/intros/walle.jpg"  alt="" data-transition="slideInLeft" /></a>
+            <a href="#"><img src="/jv/pictures/intros/nemo.jpg" alt=""  /></a>
+          </div>
+        </div><!--End .slider-wrapper-->
+
+        <script language="javascript" type="text/javascript" src="/jv/js/jquery-1.7.1.min.js"></script>
+        <script language="javascript" type="text/javascript" src="/jv/js/jquery.nivo.slider.pack.js"></script>
+        <script type="text/javascript">
+        $(window).load(function() {
+          $('#slider').nivoSlider();
+        });
+        </script>
+
+      </div>
+
+      <div class="focus">
+        <div class="f3" onMouseOver="showtip(f123[1])" onMouseOut="hidetip()" >
+          <img src="pictures/tt.jpg" />
+          <br />
+          <a href="#">
+            <h3>Thủ tướng:Tôi sẽ tiếp tục đảm nhiệm công việc đã làm</h3>
+          </a>
+        </div>
+        <div class="f3" style="margin-left:11px;"  onMouseOver="showtip(f1[1])" onMouseOut="hidetip()" >
+          <img src="/jv/pictures/sh.jpg"  />
+          <br />
+          <a href="#">
+            <h3>Báo động 1/3 thịt tươi sống nhiễm khuẩn gây bệnh thương hàn </h3>
+          </a>
+        </div>
+        <div class="f3" style="float: right;"  onMouseOver="showtip(f2[1])" onMouseOut="hidetip()" >
+          <img src="/jv/pictures/qh1.jpg" />
+          <br />
+          <a href="#">
+            <h3>Bế mạc Đại hội lần thứ 18 Đảng Cộng sản Trung Quốc </h3>
+          </a>
+        </div>
+
+        <script language="JavaScript" >
+        var f123 = new Array();
+        f123[1] ="<table cellspacing =0 >";
+        f123[1] +="<tr><th>";
+        f123[1] +="Thủ tướng:Tôi sẽ tiếp tục đảm nhiệm công việc đã làm";
+        f123[1] +="</th></tr>";
+        f123[1] +="<tr><td>";
+        f123[1] +="Việc giải độc đắc Powerball không có chủ nhân trong lần quay số trước, người Mỹ đang háo hức tìm mua một tờ vé số giá chỉ 2 USD với mong muốn trở thành chủ nhân của giải độc đắc 500 triệu USD, tương đương hơn 10.000 tỷ đồng";
+        f123[1] +="</td></tr>";
+        f123[1] +="</table>";
+
+        </script>
+
+        <script language="JavaScript" >
+        var f1 = new Array();
+        f1[1] ="<table cellspacing =0 >";
+        f1[1] +="<tr><th>";
+        f1[1] +="Báo động 1/3 thịt tươi sống nhiễm khuẩn gây bệnh thương hàn ";
+        f1[1] +="</th></tr>";
+        f1[1] +="<tr><td>";
+        f1[1] +="Việc giải độc đắc Powerball không có chủ nhân trong lần quay số trước, người Mỹ đang háo hức tìm mua một tờ vé số giá chỉ 2 USD với mong muốn trở thành chủ nhân của giải độc đắc 500 triệu USD, tương đương hơn 10.000 tỷ đồng";
+        f1[1] +="</td></tr>";
+        f1[1] +="</table>";
+
+        </script>
+
+        <script language="JavaScript" >
+        var f2 = new Array();
+        f2[1] ="<table cellspacing =0 >";
+        f2[1] +="<tr><th>";
+        f2[1] +="Bế mạc Đại hội lần thứ 18 Đảng Cộng sản Trung Quốc ";
+        f2[1] +="</th></tr>";
+        f2[1] +="<tr><td>";
+        f2[1] +="Việc giải độc đắc Powerball không có chủ nhân trong lần quay số trước, người Mỹ đang háo hức tìm mua một tờ vé số giá chỉ 2 USD với mong muốn trở thành chủ nhân của giải độc đắc 500 triệu USD, tương đương hơn 10.000 tỷ đồng";
+        f2[1] +="</td></tr>";
+        f2[1] +="</table>";
+
+        </script>
+
+
+        <div class="clr"></div>
+    </div>
+
+    <div class="sections">
+      <div class="title">
+        <div class="lcurr_title"></div>
+        <div class="curr_title"><h3>Giới thiệu</h3></div>
+        <div class="rcurr_title"></div>
+
+        <div class="links_title">
+          <a href="#">Cơ cấu tổ chức</a>&nbsp;|&nbsp;
+          <a href="#">Lĩnh vực hoạt động</a>&nbsp;|&nbsp;
+          <a href="#">Lịch sử</a>
+        </div>
+
+        <div class="clr"> </div>
+</div>
+
+<div class="sections_content">
+  <div class="sections_content_left">
+    <img src="/jv/pictures/noisoi.jpg" />
+    <a href="#" >Những kỹ thuật nội soi</a>
+    <p>
+    Trong đề tài “Cụm công trình nghiên cứu phẫu thuật nội soi trẻ em”
+    tham dự Giải thưởng Nhân tài đất Việt của GS.TS Nguyễn Thanh Liêm,
+    Giám đốc BV Nhi Trung ương, ông rất tâm đắc với nhiều kỹ thuật mới được thế giới đánh giá cao.
+    </p>
+  </div>
+
+  <div class="sections_content_right">
+    <ul>
+      <li><a href="#">Gần 3 năm trở qua, hễ ra ngoài hay ở nhà,</a></li>
+      <li><a href="#">Ferguson: "Norwich xứng đáng giành chiến thắng" </a></li>
+      <li><a href="#">Hà Nội: Ngã xuống hồ nước trong công viên, một cháu bé tử vong </a></li>
+      <li><a href="#">Căng thẳng “leo thang” xung quanh dự án cải tạo tập thể Nguyễn Công Trứ </a></li>
+    </ul>
+
+  </div>
+
+  <div class="clr"> </div>
+</div>
+</div>
+
+<div class="sections">
+  <div class="title">
+    <div class="lcurr_title"></div>
+    <div class="curr_title"><h3>Giới thiệu</h3></div>
+    <div class="rcurr_title"></div>
+
+    <div class="links_title">
+      <a href="#">Cơ cấu tổ chức</a>&nbsp;|&nbsp;
+      <a href="#">Lĩnh vực hoạt động</a>&nbsp;|&nbsp;
+      <a href="#">Lịch sử</a>
+    </div>
+
+    <div class="clr"> </div>
+</div>
+
+<div class="sections_content">
+  <div class="sections_content_left">
+    <img src="/jv/pictures/noisoi.jpg" />
+    <a href="#" >Những kỹ thuật nội soi</a>
+    <p>
+    Trong đề tài “Cụm công trình nghiên cứu phẫu thuật nội soi trẻ em”
+    tham dự Giải thưởng Nhân tài đất Việt của GS.TS Nguyễn Thanh Liêm,
+    Giám đốc BV Nhi Trung ương, ông rất tâm đắc với nhiều kỹ thuật mới được thế giới đánh giá cao.
+    </p>
+  </div>
+
+  <div class="sections_content_right">
+    <ul>
+      <li><a href="#">Gần 3 năm trở qua, hễ ra ngoài hay ở nhà,</a></li>
+      <li><a href="#">Ferguson: "Norwich xứng đáng giành chiến thắng" </a></li>
+      <li><a href="#">Hà Nội: Ngã xuống hồ nước trong công viên, một cháu bé tử vong </a></li>
+      <li><a href="#">Căng thẳng “leo thang” xung quanh dự án cải tạo tập thể Nguyễn Công Trứ </a></li>
+    </ul>
+  </div>
+
+  <div class="clr"> </div>
+</div>
+</div>
+
+<div class="sections">
+  <div class="title">
+    <div class="lcurr_title"></div>
+    <div class="curr_title"><h3>Giới thiệu</h3></div>
+    <div class="rcurr_title"></div>
+
+    <div class="links_title">
+      <a href="#">Cơ cấu tổ chức</a>&nbsp;|&nbsp;
+      <a href="#">Lĩnh vực hoạt động</a>&nbsp;|&nbsp;
+      <a href="#">Lịch sử</a>
+    </div>
+
+    <div class="clr"> </div>
+</div>
+
+<div class="sections_content">
+  <div class="sections_content_left">
+    <img src="/jv/pictures/noisoi.jpg" />
+    <a href="#" >Những kỹ thuật nội soi</a>
+    <p>
+    Trong đề tài “Cụm công trình nghiên cứu phẫu thuật nội soi trẻ em”
+    tham dự Giải thưởng Nhân tài đất Việt của GS.TS Nguyễn Thanh Liêm,
+    Giám đốc BV Nhi Trung ương, ông rất tâm đắc với nhiều kỹ thuật mới được thế giới đánh giá cao.
+    </p>
+  </div>
+
+  <div class="sections_content_right">
+    <ul>
+      <li><a href="#">Gần 3 năm trở qua, hễ ra ngoài hay ở nhà,</a></li>
+      <li><a href="#">Ferguson: "Norwich xứng đáng giành chiến thắng" </a></li>
+      <li><a href="#">Hà Nội: Ngã xuống hồ nước trong công viên, một cháu bé tử vong </a></li>
+      <li><a href="#">Căng thẳng “leo thang” xung quanh dự án cải tạo tập thể Nguyễn Công Trứ </a></li>
+    </ul>
+  </div>
+
+  <div class="clr"> </div>
+</div>
+</div>
+</div>
+
+<div class="rview">
+  <div class="title1" >
+    <a href="#">
+      <h3>Tin mới nhất</h3>
+    </a>
+  </div>
+
+  <div class="news">
+    <a href="#" onMouseOver="showtip(viewNews[1])" onMouseOut="hidetip()" ><h3>Báo Trung Quốc lên tiếng vụ “hớ” trước báo Mỹ</h3></a>
+    <a href="#" onMouseOver="showtip(viewNews2[1])" onMouseOut="hidetip()" ><h3>In hộ chiếu đường lưỡi bò là sai lầm và thiếu hiểu biết </h3></a>
+    <a href="#" onMouseOver="showtip(viewNews3[1])" onMouseOut="hidetip()" ><h3>Nhìn lại chiến thắng hủy diệt của Arsenal trước Tottenham</h3></a>
+    <a href="#"><h3>Nhớ nhé, cô giáo của ngày mai</h3></a>
+    <a href="#"><h3>Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm</h3></a>
+    <a href="#"><h3>Hàng đa cấp “chễm chệ” trong chợ Phú Lâm</h3></a>
+
+    <script language="JavaScript"  type="">
+    var viewNews = new Array();
+    viewNews[1] ="<table cellspacing=0>";
+    viewNews[1] +="<tr><th>";
+    viewNews[1] +="Báo Trung Quốc lên tiếng vụ “hớ” trước báo Mỹ ";
+    viewNews[1] +="</th></tr>";
+    viewNews[1] +="<tr><td>";
+    viewNews[1] +="<img src=\"/jv/pictures/my.jpg\" id=\"itt\" />";
+    viewNews[1] +="Một biên tập viên của tờ Nhân dân Nhật báo, tờ đưa lại bình chọn của tờ báo châm biếm Mỹ rằng nhà lãnh đạo Triều Tiên Kim Jong-un là “người đàn ông hấp dẫn nhất”, cho biết bài báo sẽ được gỡ xuống. ";
+    viewNews[1] +="</td></tr>";
+    viewNews[1] +="</table>";
+    </script>
+
+    <script language="JavaScript" >
+    var viewNews2 = new Array();
+    viewNews2[1] ="<table cellspacing=0>";
+    viewNews2[1] +="<tr><th>";
+    viewNews2[1] +="In hộ chiếu đường lưỡi bò là sai lầm và thiếu hiểu biết ";
+    viewNews2[1] +="</th></tr>";
+    viewNews2[1] +="<tr><td>";
+    viewNews2[1] +="<img src=\"pictures/tq.jpg\" id=\"itt\" />";
+    viewNews2[1] +=" “Đường lưỡi bò” của Trung Quốc hoàn toàn không có cơ sở lịch sử và pháp lý. Việc in “đường lưỡi bò” lên hộ chiếu của Trung Quốc là hành động “sai lầm và thiếu hiểu biết” – nhiều đánh giá được đưa ra sau hội thảo Quốc tế Việt Nam học lần thứ 4. ";
+    viewNews2[1] +="</td></tr>";
+    viewNews2[1] +="</table>";
+    </script>
+
+    <script language="JavaScript" >
+    var viewNews3 = new Array();
+    viewNews3[1] ="<table cellspacing=0>";
+    viewNews3[1] +="<tr><th>";
+    viewNews3[1] +="In hộ chiếu đường lưỡi bò là sai lầm và thiếu hiểu biết ";
+    viewNews3[1] +="</th></tr>";
+    viewNews3[1] +="<tr><td>";
+    viewNews3[1] +="<img src=\"/jv/pictures/tq.jpg\" id=\"itt\" />";
+    viewNews3[1] +=" “Đường lưỡi bò” của Trung Quốc hoàn toàn không có cơ sở lịch sử và pháp lý. Việc in “đường lưỡi bò” lên hộ chiếu của Trung Quốc là hành động “sai lầm và thiếu hiểu biết” – nhiều đánh giá được đưa ra sau hội thảo Quốc tế Việt Nam học lần thứ 4. ";
+    viewNews3[1] +="</td></tr>";
+    viewNews3[1] +="</table>";
+    </script>
+
+
+  </div>
+
+  <!--form slide show-->
+  <div id="slider-marquee" >
+    <!--hiệu ứng chạy từ dưới lên, delay 50s, chạy 2px/lần , di chuột vào thì dừng, bỏ chuột ra thì chạy-->
+    <marquee direction="up" scrolldelay="50" scrollamount="2" onMouseOver="stop()" onMouseOut="start()">
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg" />
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg" />
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg" />
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg" />
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+    </marquee>
+  </div>
+</div>
+
+<div class="clr"></div>
+
+<div class="links">
+
+  <div class="slider-wrapper theme-default">
+    <div id="slider1" class="nivoSlider">
+      <a href="#"><img src="/jv/pictures/intro10.jpg" alt="" title="Ốp bếp với sản phẩm gạch viền, gạch điểm thân quen và độc đáo." /></a>
+      <a href="#"><img src="/jv/pictures/intro9.jpg" alt="" title="Lát nền cho những không gian phòng chờ lớn" /></a>
+      <a href="#"><img src="/jv/pictures/intro8.jpg" alt="" title="Phòng khách sang trọng, thoáng đãng" /></a>
+      <a href="#"><img src="/jv/pictures/intro7.jpg" alt="" title="Ốp lát tạo sự sang trọng cho phòng tắm của bạn" /></a>
+      <a href="#"><img src="/jv/pictures/intro6.jpg" alt="" title="Lát nền sân vườn, nơi bạn tận hưởng cảm giác thiên nhiên thực sự" /></a>
+      <a href="#"><img src="/jv/pictures/intro5.jpg" alt="" title="Lát nền cho những không gian ngoài trời" /></a>
+      <a href="#"><img src="/jv/pictures/intro4.jpg" alt="" title="Lát nền có gam màu đi cùng với nội thất" /></a>
+      <a href="#"><img src="/jv/pictures/intro3.jpg" alt="" title="Lát nền phòng ngủ với những sắc màu ấm cúng"   data-transition="slideInLeft"/></a>
+      <a href="#"><img src="/jv/pictures/intro2.jpg" alt="" title="Lát nền cho những không gian phòng chờ lớn" /></a>
+    </div>
+  </div><!--End .slider-wrapper-->
+
+  <script language="javascript" type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script language="javascript" type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript">
+  $(window).load(function() {
+    $('#slider1').nivoSlider();
+  });
+  </script>
+  </div>
+</div>
+
+<div class="rcontent">
+  <div id="video"> <!--chèn video từ youtube-->
+    <iframe width="250" height="250" src="http://www.youtube.com/embed/RNPYatfFhGU?modestbranding=1"
+    frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="title1">
+    <a href="#"><h3>Hỗ trợ trực tuyến</h3></a>
+  </div>
+
+  <div id="support">
+    <div class="sitem"> <!-- hỗ trợ từ yahoo-->
+      <a class="yahoo" href="ymsgr:sendIM?love.exe_9x">
+        <img src="http://opi.yahoo.com/online?u=love.exe_9x&m=g&t=14" alt=""/>
+      </a>
+
+      <a class="yahoo" href="ymsgr:sendIM?love.exe_9x">
+      Hỗ trợ kỹ thuật
+      </a>
+      0123456789 <br />
+      huy1992.tb@gmail.com
+    </div>
+
+    <div class="sitem"> <!-- hỗ trợ từ yahoo-->
+      <a class="yahoo" href="ymsgr:sendIM?love.exe_9x">
+        <img src="http://opi.yahoo.com/online?u=love.exe_9x&m=g&t=14" alt=""/>
+      </a>
+
+      <a class="yahoo" href="ymsgr:sendIM?love.exe_9x">
+      Hỗ trợ kỹ thuật
+      </a>
+      0123456789 <br />
+      huy1992.tb@gmail.com
+    </div>
+
+    <div class="sitem"> <!-- hỗ trợ từ yahoo-->
+      <a class="yahoo" href="ymsgr:sendIM?boy_thai_ninh_9x">
+        <img src="http://opi.yahoo.com/online?u=boy_thai_ninh_9x&m=g&t=14" alt=""/>
+      </a>
+
+      <a class="yahoo" href="ymsgr:sendIM?boy_thai_ninh_9x">
+      Hỗ trợ kỹ thuật
+      </a>
+      0123456789 <br />
+      huy1992.tb@gmail.com
+    </div>
+  </div>
+
+  <div class="title1" >
+    <a href="#">
+      <h3>Quảng cáo</h3>
+    </a>
+  </div>
+
+  <div id="rcontent_advs">
+
+  </div>
+</div>
+
+<div class="clr"></div>
+
+<div class="footer">
+  <div id="menu-bottom" >
+    <a href="#">Trang chủ</a>&nbsp;|&nbsp;
+    <a href="#">Giới thiệu</a>&nbsp;|&nbsp;
+    <a href="#">Tin tức</a>&nbsp;|&nbsp;
+    <a href="#">sản phẩm</a>&nbsp;|&nbsp;
+    <a href="#">Hỗ trợ</a>&nbsp;|&nbsp;
+    <a href="#">Liên hệ</a>
+  </div>
+  This website is built by JP06 group.<br />
+  Develop on J2EE technology.<br />
+  copyright @2012.
+</div>
+</div>
+</body>
+</html>
+
+

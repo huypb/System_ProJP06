@@ -1,0 +1,645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class java.lang.Math</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">java.lang</FONT>
+<BR>Class Math</H2>
+<DL>
+<DT>public final class <B>Math</B>
+</DL>
+<DL><DD>The class <code>Math</code> contains methods for performing basic numeric operations such as the elementary exponential, logarithm, square root, and trigonometric functions. <p>Unlike some of the numeric methods of class <code>StrictMath</code>, all implementations of the equivalent functions of class <code>Math</code> are not defined to return the bit-for-bit same results. This relaxation permits better-performing implementations where strict reproducibility is not required. <p>By default many of the <code>Math</code> methods simply call the equivalent method in <code>StrictMath</code> for their implementation. Code generators are encouraged to use platform-specific native libraries or microprocessor instructions, where available, to provide higher-performance implementations of <code>Math</code> methods. Such higher-performance implementations still must conform to the specification for <code>Math</code>. <p>The quality of implementation specifications concern two properties, accuracy of the returned result and monotonicity of the method. Accuracy of the floating-point <code>Math</code> methods is measured in terms of <i>ulps</i>, units in the last place. For a given floating-point format, an ulp of a specific real number value is the distance between the two floating-point values bracketing that numerical value. When discussing the accuracy of a method as a whole rather than at a specific argument, the number of ulps cited is for the worst-case error at any argument. If a method always has an error less than 0.5 ulps, the method always returns the floating-point number nearest the exact result; such a method is <i>correctly rounded</i>. A correctly rounded method is generally the best a floating-point approximation can be; however, it is impractical for many floating-point methods to be correctly rounded. Instead, for the <code>Math</code> class, a larger error bound of 1 or 2 ulps is allowed for certain methods. Informally, with a 1 ulp error bound, when the exact result is a representable number, the exact result should be returned as the computed result; otherwise, either of the two floating-point values which bracket the exact result may be returned. For exact results large in magnitude, one of the endpoints of the bracket may be infinite. Besides accuracy at individual arguments, maintaining proper relations between the method at different arguments is also important. Therefore, most methods with more than 0.5 ulp errors are required to be <i>semi-monotonic</i>: whenever the mathematical function is non-decreasing, so is the floating-point approximation, likewise, whenever the mathematical function is non-increasing, so is the floating-point approximation. Not all approximations that have 1 ulp accuracy will automatically meet the monotonicity requirements.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Version:</B><DD>1.69, 06/14/04</DD>
+<DT><B>Author:</B><DD>unascribed</DD>
+<DD>Joseph D. Darcy</DD>
+<DT><B>Since:</B><DD>JDK1.0</DD>
+</DL>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Field Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="E"></A>
+
+<H3>E</H3>
+<PRE>
+public static final double <B>E</B></PRE>
+<DL><DD>The <code>double</code> value that is closer than any other to <i>e</i>, the base of the natural logarithms.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="PI"></A>
+
+<H3>PI</H3>
+<PRE>
+public static final double <B>PI</B></PRE>
+<DL><DD>The <code>double</code> value that is closer than any other to <i>pi</i>, the ratio of the circumference of a circle to its diameter.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Constructor Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="Math()"></A>
+
+<H3>Math</H3>
+<PRE>
+private <B>Math</B>()</PRE>
+<DL><DD>Don't let anyone instantiate this class.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="sin(double)"></A>
+
+<H3>sin</H3>
+<PRE>
+public static double <B>sin</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the trigonometric sine of an angle. Special cases: <ul><li>If the argument is NaN or an infinity, then the result is NaN. <li>If the argument is zero, then the result is a zero with the same sign as the argument.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an angle, in radians.</DD>
+<DT><B>Returns:</B><DD>the sine of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="cos(double)"></A>
+
+<H3>cos</H3>
+<PRE>
+public static double <B>cos</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the trigonometric cosine of an angle. Special cases: <ul><li>If the argument is NaN or an infinity, then the result is NaN.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an angle, in radians.</DD>
+<DT><B>Returns:</B><DD>the cosine of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="tan(double)"></A>
+
+<H3>tan</H3>
+<PRE>
+public static double <B>tan</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the trigonometric tangent of an angle. Special cases: <ul><li>If the argument is NaN or an infinity, then the result is NaN. <li>If the argument is zero, then the result is a zero with the same sign as the argument.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an angle, in radians.</DD>
+<DT><B>Returns:</B><DD>the tangent of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="asin(double)"></A>
+
+<H3>asin</H3>
+<PRE>
+public static double <B>asin</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the arc sine of an angle, in the range of -<i>pi</i>/2 through <i>pi</i>/2. Special cases: <ul><li>If the argument is NaN or its absolute value is greater than 1, then the result is NaN. <li>If the argument is zero, then the result is a zero with the same sign as the argument.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the value whose arc sine is to be returned.</DD>
+<DT><B>Returns:</B><DD>the arc sine of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="acos(double)"></A>
+
+<H3>acos</H3>
+<PRE>
+public static double <B>acos</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the arc cosine of an angle, in the range of 0.0 through <i>pi</i>. Special case: <ul><li>If the argument is NaN or its absolute value is greater than 1, then the result is NaN.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the value whose arc cosine is to be returned.</DD>
+<DT><B>Returns:</B><DD>the arc cosine of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="atan(double)"></A>
+
+<H3>atan</H3>
+<PRE>
+public static double <B>atan</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the arc tangent of an angle, in the range of -<i>pi</i>/2 through <i>pi</i>/2. Special cases: <ul><li>If the argument is NaN, then the result is NaN. <li>If the argument is zero, then the result is a zero with the same sign as the argument.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the value whose arc tangent is to be returned.</DD>
+<DT><B>Returns:</B><DD>the arc tangent of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="toRadians(double)"></A>
+
+<H3>toRadians</H3>
+<PRE>
+public static double <B>toRadians</B>(double&nbsp;angdeg)</PRE>
+<DL><DD>Converts an angle measured in degrees to an approximately equivalent angle measured in radians. The conversion from degrees to radians is generally inexact.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>angdeg</CODE> - an angle, in degrees</DD>
+<DT><B>Returns:</B><DD>the measurement of the angle <code>angdeg</code> in radians.</DD>
+<DT><B>Since:</B><DD>1.2</DD>
+</DL>
+<HR>
+
+<A NAME="toDegrees(double)"></A>
+
+<H3>toDegrees</H3>
+<PRE>
+public static double <B>toDegrees</B>(double&nbsp;angrad)</PRE>
+<DL><DD>Converts an angle measured in radians to an approximately equivalent angle measured in degrees. The conversion from radians to degrees is generally inexact; users should <i>not</i> expect <code>cos(toRadians(90.0))</code> to exactly equal <code>0.0</code>.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>angrad</CODE> - an angle, in radians</DD>
+<DT><B>Returns:</B><DD>the measurement of the angle <code>angrad</code> in degrees.</DD>
+<DT><B>Since:</B><DD>1.2</DD>
+</DL>
+<HR>
+
+<A NAME="exp(double)"></A>
+
+<H3>exp</H3>
+<PRE>
+public static double <B>exp</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns Euler's number <i>e</i> raised to the power of a <code>double</code> value. Special cases: <ul><li>If the argument is NaN, the result is NaN. <li>If the argument is positive infinity, then the result is positive infinity. <li>If the argument is negative infinity, then the result is positive zero.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the exponent to raise <i>e</i> to.</DD>
+<DT><B>Returns:</B><DD>the value <i>e</i><sup><code>a</code></sup>, where <i>e</i> is the base of the natural logarithms.</DD>
+</DL>
+<HR>
+
+<A NAME="log(double)"></A>
+
+<H3>log</H3>
+<PRE>
+public static double <B>log</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the natural logarithm (base <i>e</i>) of a <code>double</code> value. Special cases: <ul><li>If the argument is NaN or less than zero, then the result is NaN. <li>If the argument is positive infinity, then the result is positive infinity. <li>If the argument is positive zero or negative zero, then the result is negative infinity.</ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a value</DD>
+<DT><B>Returns:</B><DD>the value ln&nbsp;<code>a</code>, the natural logarithm of <code>a</code>.</DD>
+</DL>
+<HR>
+
+<A NAME="log10(double)"></A>
+
+<H3>log10</H3>
+<PRE>
+public static double <B>log10</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the base 10 logarithm of a <code>double</code> value. Special cases: <ul><li>If the argument is NaN or less than zero, then the result is NaN. <li>If the argument is positive infinity, then the result is positive infinity. <li>If the argument is positive zero or negative zero, then the result is negative infinity. <li> If the argument is equal to 10<sup><i>n</i></sup> for integer <i>n</i>, then the result is <i>n</i>. </ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a value</DD>
+<DT><B>Returns:</B><DD>the base 10 logarithm of <code>a</code>.</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="sqrt(double)"></A>
+
+<H3>sqrt</H3>
+<PRE>
+public static double <B>sqrt</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the correctly rounded positive square root of a <code>double</code> value. Special cases: <ul><li>If the argument is NaN or less than zero, then the result is NaN. <li>If the argument is positive infinity, then the result is positive infinity. <li>If the argument is positive zero or negative zero, then the result is the same as the argument.</ul> Otherwise, the result is the <code>double</code> value closest to the true mathematical square root of the argument value.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a value.</DD>
+<DT><B>Returns:</B><DD>the positive square root of <code>a</code>. If the argument is NaN or less than zero, the result is NaN.</DD>
+</DL>
+<HR>
+
+<A NAME="cbrt(double)"></A>
+
+<H3>cbrt</H3>
+<PRE>
+public static double <B>cbrt</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the cube root of a <code>double</code> value. For positive finite <code>x</code>, <code>cbrt(-x) == -cbrt(x)</code>; that is, the cube root of a negative value is the negative of the cube root of that value's magnitude. Special cases: <ul> <li>If the argument is NaN, then the result is NaN. <li>If the argument is infinite, then the result is an infinity with the same sign as the argument. <li>If the argument is zero, then the result is a zero with the same sign as the argument. </ul> <p>The computed result must be within 1 ulp of the exact result.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a value.</DD>
+<DT><B>Returns:</B><DD>the cube root of <code>a</code>.</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="IEEEremainder(double, double)"></A>
+
+<H3>IEEEremainder</H3>
+<PRE>
+public static double <B>IEEEremainder</B>(double&nbsp;f1,
+                                   double&nbsp;f2)</PRE>
+<DL><DD>Computes the remainder operation on two arguments as prescribed by the IEEE 754 standard. The remainder value is mathematically equal to <code>f1&nbsp;-&nbsp;f2</code>&nbsp;&times;&nbsp;<i>n</i>, where <i>n</i> is the mathematical integer closest to the exact mathematical value of the quotient <code>f1/f2</code>, and if two mathematical integers are equally close to <code>f1/f2</code>, then <i>n</i> is the integer that is even. If the remainder is zero, its sign is the same as the sign of the first argument. Special cases: <ul><li>If either argument is NaN, or the first argument is infinite, or the second argument is positive zero or negative zero, then the result is NaN. <li>If the first argument is finite and the second argument is infinite, then the result is the same as the first argument.</ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>f1</CODE> - the dividend.</DD>
+<DD><CODE>f2</CODE> - the divisor.</DD>
+<DT><B>Returns:</B><DD>the remainder when <code>f1</code> is divided by <code>f2</code>.</DD>
+</DL>
+<HR>
+
+<A NAME="ceil(double)"></A>
+
+<H3>ceil</H3>
+<PRE>
+public static double <B>ceil</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the smallest (closest to negative infinity) <code>double</code> value that is greater than or equal to the argument and is equal to a mathematical integer. Special cases: <ul><li>If the argument value is already equal to a mathematical integer, then the result is the same as the argument. <li>If the argument is NaN or an infinity or positive zero or negative zero, then the result is the same as the argument. <li>If the argument value is less than zero but greater than -1.0, then the result is negative zero.</ul> Note that the value of <code>Math.ceil(x)</code> is exactly the value of <code>-Math.floor(-x)</code>.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a value.</DD>
+<DT><B>Returns:</B><DD>the smallest (closest to negative infinity) floating-point value that is greater than or equal to the argument and is equal to a mathematical integer.</DD>
+</DL>
+<HR>
+
+<A NAME="floor(double)"></A>
+
+<H3>floor</H3>
+<PRE>
+public static double <B>floor</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the largest (closest to positive infinity) <code>double</code> value that is less than or equal to the argument and is equal to a mathematical integer. Special cases: <ul><li>If the argument value is already equal to a mathematical integer, then the result is the same as the argument. <li>If the argument is NaN or an infinity or positive zero or negative zero, then the result is the same as the argument.</ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a value.</DD>
+<DT><B>Returns:</B><DD>the largest (closest to positive infinity) floating-point value that less than or equal to the argument and is equal to a mathematical integer.</DD>
+</DL>
+<HR>
+
+<A NAME="rint(double)"></A>
+
+<H3>rint</H3>
+<PRE>
+public static double <B>rint</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the <code>double</code> value that is closest in value to the argument and is equal to a mathematical integer. If two <code>double</code> values that are mathematical integers are equally close, the result is the integer value that is even. Special cases: <ul><li>If the argument value is already equal to a mathematical integer, then the result is the same as the argument. <li>If the argument is NaN or an infinity or positive zero or negative zero, then the result is the same as the argument.</ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a <code>double</code> value.</DD>
+<DT><B>Returns:</B><DD>the closest floating-point value to <code>a</code> that is equal to a mathematical integer.</DD>
+</DL>
+<HR>
+
+<A NAME="atan2(double, double)"></A>
+
+<H3>atan2</H3>
+<PRE>
+public static double <B>atan2</B>(double&nbsp;y,
+                           double&nbsp;x)</PRE>
+<DL><DD>Converts rectangular coordinates (<code>x</code>,&nbsp;<code>y</code>) to polar (r,&nbsp;<i>theta</i>). This method computes the phase <i>theta</i> by computing an arc tangent of <code>y/x</code> in the range of -<i>pi</i> to <i>pi</i>. Special cases: <ul><li>If either argument is NaN, then the result is NaN. <li>If the first argument is positive zero and the second argument is positive, or the first argument is positive and finite and the second argument is positive infinity, then the result is positive zero. <li>If the first argument is negative zero and the second argument is positive, or the first argument is negative and finite and the second argument is positive infinity, then the result is negative zero. <li>If the first argument is positive zero and the second argument is negative, or the first argument is positive and finite and the second argument is negative infinity, then the result is the <code>double</code> value closest to <i>pi</i>. <li>If the first argument is negative zero and the second argument is negative, or the first argument is negative and finite and the second argument is negative infinity, then the result is the <code>double</code> value closest to -<i>pi</i>. <li>If the first argument is positive and the second argument is positive zero or negative zero, or the first argument is positive infinity and the second argument is finite, then the result is the <code>double</code> value closest to <i>pi</i>/2. <li>If the first argument is negative and the second argument is positive zero or negative zero, or the first argument is negative infinity and the second argument is finite, then the result is the <code>double</code> value closest to -<i>pi</i>/2. <li>If both arguments are positive infinity, then the result is the <code>double</code> value closest to <i>pi</i>/4. <li>If the first argument is positive infinity and the second argument is negative infinity, then the result is the <code>double</code> value closest to 3*<i>pi</i>/4. <li>If the first argument is negative infinity and the second argument is positive infinity, then the result is the <code>double</code> value closest to -<i>pi</i>/4. <li>If both arguments are negative infinity, then the result is the <code>double</code> value closest to -3*<i>pi</i>/4.</ul> <p>The computed result must be within 2 ulps of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>y</CODE> - the ordinate coordinate</DD>
+<DD><CODE>x</CODE> - the abscissa coordinate</DD>
+<DT><B>Returns:</B><DD>the <i>theta</i> component of the point (<i>r</i>,&nbsp;<i>theta</i>) in polar coordinates that corresponds to the point (<i>x</i>,&nbsp;<i>y</i>) in Cartesian coordinates.</DD>
+</DL>
+<HR>
+
+<A NAME="pow(double, double)"></A>
+
+<H3>pow</H3>
+<PRE>
+public static double <B>pow</B>(double&nbsp;a,
+                         double&nbsp;b)</PRE>
+<DL><DD>Returns the value of the first argument raised to the power of the second argument. Special cases: <ul><li>If the second argument is positive or negative zero, then the result is 1.0. <li>If the second argument is 1.0, then the result is the same as the first argument. <li>If the second argument is NaN, then the result is NaN. <li>If the first argument is NaN and the second argument is nonzero, then the result is NaN. <li>If <ul> <li>the absolute value of the first argument is greater than 1 and the second argument is positive infinity, or <li>the absolute value of the first argument is less than 1 and the second argument is negative infinity, </ul> then the result is positive infinity. <li>If <ul> <li>the absolute value of the first argument is greater than 1 and the second argument is negative infinity, or <li>the absolute value of the first argument is less than 1 and the second argument is positive infinity, </ul> then the result is positive zero. <li>If the absolute value of the first argument equals 1 and the second argument is infinite, then the result is NaN. <li>If <ul> <li>the first argument is positive zero and the second argument is greater than zero, or <li>the first argument is positive infinity and the second argument is less than zero, </ul> then the result is positive zero. <li>If <ul> <li>the first argument is positive zero and the second argument is less than zero, or <li>the first argument is positive infinity and the second argument is greater than zero, </ul> then the result is positive infinity. <li>If <ul> <li>the first argument is negative zero and the second argument is greater than zero but not a finite odd integer, or <li>the first argument is negative infinity and the second argument is less than zero but not a finite odd integer, </ul> then the result is positive zero. <li>If <ul> <li>the first argument is negative zero and the second argument is a positive finite odd integer, or <li>the first argument is negative infinity and the second argument is a negative finite odd integer, </ul> then the result is negative zero. <li>If <ul> <li>the first argument is negative zero and the second argument is less than zero but not a finite odd integer, or <li>the first argument is negative infinity and the second argument is greater than zero but not a finite odd integer, </ul> then the result is positive infinity. <li>If <ul> <li>the first argument is negative zero and the second argument is a negative finite odd integer, or <li>the first argument is negative infinity and the second argument is a positive finite odd integer, </ul> then the result is negative infinity. <li>If the first argument is finite and less than zero <ul> <li> if the second argument is a finite even integer, the result is equal to the result of raising the absolute value of the first argument to the power of the second argument <li>if the second argument is a finite odd integer, the result is equal to the negative of the result of raising the absolute value of the first argument to the power of the second argument <li>if the second argument is finite and not an integer, then the result is NaN. </ul> <li>If both arguments are integers, then the result is exactly equal to the mathematical result of raising the first argument to the power of the second argument if that result can in fact be represented exactly as a <code>double</code> value.</ul> <p>(In the foregoing descriptions, a floating-point value is considered to be an integer if and only if it is finite and a fixed point of the method <A HREF="#ceil <tt>ceil</tt>"><tt>ceil</tt></A> or, equivalently, a fixed point of the method <A HREF="#floor <tt>floor</tt>"><tt>floor</tt></A>. A value is a fixed point of a one-argument method if and only if the result of applying the method to the value is equal to the value.) <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the base.</DD>
+<DD><CODE>b</CODE> - the exponent.</DD>
+<DT><B>Returns:</B><DD>the value <code>a<sup>b</sup></code>.</DD>
+</DL>
+<HR>
+
+<A NAME="round(float)"></A>
+
+<H3>round</H3>
+<PRE>
+public static int <B>round</B>(float&nbsp;a)</PRE>
+<DL><DD>Returns the closest <code>int</code> to the argument. The result is rounded to an integer by adding 1/2, taking the floor of the result, and casting the result to type <code>int</code>. In other words, the result is equal to the value of the expression: <p><pre>(int)Math.floor(a + 0.5f)</pre> <p> Special cases: <ul><li>If the argument is NaN, the result is 0. <li>If the argument is negative infinity or any value less than or equal to the value of <code>Integer.MIN_VALUE</code>, the result is equal to the value of <code>Integer.MIN_VALUE</code>. <li>If the argument is positive infinity or any value greater than or equal to the value of <code>Integer.MAX_VALUE</code>, the result is equal to the value of <code>Integer.MAX_VALUE</code>.</ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a floating-point value to be rounded to an integer.</DD>
+<DT><B>Returns:</B><DD>the value of the argument rounded to the nearest <code>int</code> value.</DD>
+<DT><B>See Also:</B><DD>java.lang.Integer#MAX_VALUE</DD>
+<DD>java.lang.Integer#MIN_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="round(double)"></A>
+
+<H3>round</H3>
+<PRE>
+public static long <B>round</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the closest <code>long</code> to the argument. The result is rounded to an integer by adding 1/2, taking the floor of the result, and casting the result to type <code>long</code>. In other words, the result is equal to the value of the expression: <p><pre>(long)Math.floor(a + 0.5d)</pre> <p> Special cases: <ul><li>If the argument is NaN, the result is 0. <li>If the argument is negative infinity or any value less than or equal to the value of <code>Long.MIN_VALUE</code>, the result is equal to the value of <code>Long.MIN_VALUE</code>. <li>If the argument is positive infinity or any value greater than or equal to the value of <code>Long.MAX_VALUE</code>, the result is equal to the value of <code>Long.MAX_VALUE</code>.</ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - a floating-point value to be rounded to a <code>long</code>.</DD>
+<DT><B>Returns:</B><DD>the value of the argument rounded to the nearest <code>long</code> value.</DD>
+<DT><B>See Also:</B><DD>java.lang.Long#MAX_VALUE</DD>
+<DD>java.lang.Long#MIN_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="random()"></A>
+
+<H3>random</H3>
+<PRE>
+public static double <B>random</B>()</PRE>
+<DL><DD>Returns a <code>double</code> value with a positive sign, greater than or equal to <code>0.0</code> and less than <code>1.0</code>. Returned values are chosen pseudorandomly with (approximately) uniform distribution from that range. <p>When this method is first called, it creates a single new pseudorandom-number generator, exactly as if by the expression <blockquote><pre>new java.util.Random</pre></blockquote> This new pseudorandom-number generator is used thereafter for all calls to this method and is used nowhere else. <p>This method is properly synchronized to allow correct use by more than one thread. However, if many threads need to generate pseudorandom numbers at a great rate, it may reduce contention for each thread to have its own pseudorandom-number generator.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Returns:</B><DD>a pseudorandom <code>double</code> greater than or equal to <code>0.0</code> and less than <code>1.0</code>.</DD>
+<DT><B>See Also:</B><DD>java.util.Random#nextDouble()</DD>
+</DL>
+<HR>
+
+<A NAME="abs(int)"></A>
+
+<H3>abs</H3>
+<PRE>
+public static int <B>abs</B>(int&nbsp;a)</PRE>
+<DL><DD>Returns the absolute value of an <code>int</code> value. If the argument is not negative, the argument is returned. If the argument is negative, the negation of the argument is returned. <p>Note that if the argument is equal to the value of <code>Integer.MIN_VALUE</code>, the most negative representable <code>int</code> value, the result is that same value, which is negative.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the argument whose absolute value is to be determined</DD>
+<DT><B>Returns:</B><DD>the absolute value of the argument.</DD>
+<DT><B>See Also:</B><DD>java.lang.Integer#MIN_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="abs(long)"></A>
+
+<H3>abs</H3>
+<PRE>
+public static long <B>abs</B>(long&nbsp;a)</PRE>
+<DL><DD>Returns the absolute value of a <code>long</code> value. If the argument is not negative, the argument is returned. If the argument is negative, the negation of the argument is returned. <p>Note that if the argument is equal to the value of <code>Long.MIN_VALUE</code>, the most negative representable <code>long</code> value, the result is that same value, which is negative.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the argument whose absolute value is to be determined</DD>
+<DT><B>Returns:</B><DD>the absolute value of the argument.</DD>
+<DT><B>See Also:</B><DD>java.lang.Long#MIN_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="abs(float)"></A>
+
+<H3>abs</H3>
+<PRE>
+public static float <B>abs</B>(float&nbsp;a)</PRE>
+<DL><DD>Returns the absolute value of a <code>float</code> value. If the argument is not negative, the argument is returned. If the argument is negative, the negation of the argument is returned. Special cases: <ul><li>If the argument is positive zero or negative zero, the result is positive zero. <li>If the argument is infinite, the result is positive infinity. <li>If the argument is NaN, the result is NaN.</ul> In other words, the result is the same as the value of the expression: <p><pre>Float.intBitsToFloat(0x7fffffff & Float.floatToIntBits(a))</pre><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the argument whose absolute value is to be determined</DD>
+<DT><B>Returns:</B><DD>the absolute value of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="abs(double)"></A>
+
+<H3>abs</H3>
+<PRE>
+public static double <B>abs</B>(double&nbsp;a)</PRE>
+<DL><DD>Returns the absolute value of a <code>double</code> value. If the argument is not negative, the argument is returned. If the argument is negative, the negation of the argument is returned. Special cases: <ul><li>If the argument is positive zero or negative zero, the result is positive zero. <li>If the argument is infinite, the result is positive infinity. <li>If the argument is NaN, the result is NaN.</ul> In other words, the result is the same as the value of the expression: <p><code>Double.longBitsToDouble((Double.doubleToLongBits(a)&lt;&lt;1)&gt;&gt;&gt;1)</code><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - the argument whose absolute value is to be determined</DD>
+<DT><B>Returns:</B><DD>the absolute value of the argument.</DD>
+</DL>
+<HR>
+
+<A NAME="max(int, int)"></A>
+
+<H3>max</H3>
+<PRE>
+public static int <B>max</B>(int&nbsp;a,
+                      int&nbsp;b)</PRE>
+<DL><DD>Returns the greater of two <code>int</code> values. That is, the result is the argument closer to the value of <code>Integer.MAX_VALUE</code>. If the arguments have the same value, the result is that same value.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the larger of <code>a</code> and <code>b</code>.</DD>
+<DT><B>See Also:</B><DD>java.lang.Long#MAX_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="max(long, long)"></A>
+
+<H3>max</H3>
+<PRE>
+public static long <B>max</B>(long&nbsp;a,
+                       long&nbsp;b)</PRE>
+<DL><DD>Returns the greater of two <code>long</code> values. That is, the result is the argument closer to the value of <code>Long.MAX_VALUE</code>. If the arguments have the same value, the result is that same value.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the larger of <code>a</code> and <code>b</code>.</DD>
+<DT><B>See Also:</B><DD>java.lang.Long#MAX_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="max(float, float)"></A>
+
+<H3>max</H3>
+<PRE>
+public static float <B>max</B>(float&nbsp;a,
+                        float&nbsp;b)</PRE>
+<DL><DD>Returns the greater of two <code>float</code> values. That is, the result is the argument closer to positive infinity. If the arguments have the same value, the result is that same value. If either value is NaN, then the result is NaN. Unlike the numerical comparison operators, this method considers negative zero to be strictly smaller than positive zero. If one argument is positive zero and the other negative zero, the result is positive zero.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the larger of <code>a</code> and <code>b</code>.</DD>
+</DL>
+<HR>
+
+<A NAME="max(double, double)"></A>
+
+<H3>max</H3>
+<PRE>
+public static double <B>max</B>(double&nbsp;a,
+                         double&nbsp;b)</PRE>
+<DL><DD>Returns the greater of two <code>double</code> values. That is, the result is the argument closer to positive infinity. If the arguments have the same value, the result is that same value. If either value is NaN, then the result is NaN. Unlike the numerical comparison operators, this method considers negative zero to be strictly smaller than positive zero. If one argument is positive zero and the other negative zero, the result is positive zero.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the larger of <code>a</code> and <code>b</code>.</DD>
+</DL>
+<HR>
+
+<A NAME="min(int, int)"></A>
+
+<H3>min</H3>
+<PRE>
+public static int <B>min</B>(int&nbsp;a,
+                      int&nbsp;b)</PRE>
+<DL><DD>Returns the smaller of two <code>int</code> values. That is, the result the argument closer to the value of <code>Integer.MIN_VALUE</code>. If the arguments have the same value, the result is that same value.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the smaller of <code>a</code> and <code>b</code>.</DD>
+<DT><B>See Also:</B><DD>java.lang.Long#MIN_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="min(long, long)"></A>
+
+<H3>min</H3>
+<PRE>
+public static long <B>min</B>(long&nbsp;a,
+                       long&nbsp;b)</PRE>
+<DL><DD>Returns the smaller of two <code>long</code> values. That is, the result is the argument closer to the value of <code>Long.MIN_VALUE</code>. If the arguments have the same value, the result is that same value.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the smaller of <code>a</code> and <code>b</code>.</DD>
+<DT><B>See Also:</B><DD>java.lang.Long#MIN_VALUE</DD>
+</DL>
+<HR>
+
+<A NAME="min(float, float)"></A>
+
+<H3>min</H3>
+<PRE>
+public static float <B>min</B>(float&nbsp;a,
+                        float&nbsp;b)</PRE>
+<DL><DD>Returns the smaller of two <code>float</code> values. That is, the result is the value closer to negative infinity. If the arguments have the same value, the result is that same value. If either value is NaN, then the result is NaN. Unlike the numerical comparison operators, this method considers negative zero to be strictly smaller than positive zero. If one argument is positive zero and the other is negative zero, the result is negative zero.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the smaller of <code>a</code> and <code>b.</code></DD>
+</DL>
+<HR>
+
+<A NAME="min(double, double)"></A>
+
+<H3>min</H3>
+<PRE>
+public static double <B>min</B>(double&nbsp;a,
+                         double&nbsp;b)</PRE>
+<DL><DD>Returns the smaller of two <code>double</code> values. That is, the result is the value closer to negative infinity. If the arguments have the same value, the result is that same value. If either value is NaN, then the result is NaN. Unlike the numerical comparison operators, this method considers negative zero to be strictly smaller than positive zero. If one argument is positive zero and the other is negative zero, the result is negative zero.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>a</CODE> - an argument.</DD>
+<DD><CODE>b</CODE> - another argument.</DD>
+<DT><B>Returns:</B><DD>the smaller of <code>a</code> and <code>b</code>.</DD>
+</DL>
+<HR>
+
+<A NAME="ulp(double)"></A>
+
+<H3>ulp</H3>
+<PRE>
+public static double <B>ulp</B>(double&nbsp;d)</PRE>
+<DL><DD>Returns the size of an ulp of the argument. An ulp of a <code>double</code> value is the positive distance between this floating-point value and the <code>double</code> value next larger in magnitude. Note that for non-NaN <i>x</i>, <code>ulp(-<i>x</i>) == ulp(<i>x</i>)</code>. <p>Special Cases: <ul> <li> If the argument is NaN, then the result is NaN. <li> If the argument is positive or negative infinity, then the result is positive infinity. <li> If the argument is positive or negative zero, then the result is <code>Double.MIN_VALUE</code>. <li> If the argument is &plusmn;<code>Double.MAX_VALUE</code>, then the result is equal to 2<sup>971</sup>. </ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>d</CODE> - the floating-point value whose ulp is to be returned</DD>
+<DT><B>Returns:</B><DD>the size of an ulp of the argument</DD>
+<DT><B>Author:</B><DD>Joseph D. Darcy</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="ulp(float)"></A>
+
+<H3>ulp</H3>
+<PRE>
+public static float <B>ulp</B>(float&nbsp;f)</PRE>
+<DL><DD>Returns the size of an ulp of the argument. An ulp of a <code>float</code> value is the positive distance between this floating-point value and the <code>float</code> value next larger in magnitude. Note that for non-NaN <i>x</i>, <code>ulp(-<i>x</i>) == ulp(<i>x</i>)</code>. <p>Special Cases: <ul> <li> If the argument is NaN, then the result is NaN. <li> If the argument is positive or negative infinity, then the result is positive infinity. <li> If the argument is positive or negative zero, then the result is <code>Float.MIN_VALUE</code>. <li> If the argument is &plusmn;<code>Float.MAX_VALUE</code>, then the result is equal to 2<sup>104</sup>. </ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>f</CODE> - the floating-point value whose ulp is to be returned</DD>
+<DT><B>Returns:</B><DD>the size of an ulp of the argument</DD>
+<DT><B>Author:</B><DD>Joseph D. Darcy</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="signum(double)"></A>
+
+<H3>signum</H3>
+<PRE>
+public static double <B>signum</B>(double&nbsp;d)</PRE>
+<DL><DD>Returns the signum function of the argument; zero if the argument is zero, 1.0 if the argument is greater than zero, -1.0 if the argument is less than zero. <p>Special Cases: <ul> <li> If the argument is NaN, then the result is NaN. <li> If the argument is positive zero or negative zero, then the result is the same as the argument. </ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>d</CODE> - the floating-point value whose signum is to be returned</DD>
+<DT><B>Returns:</B><DD>the signum function of the argument</DD>
+<DT><B>Author:</B><DD>Joseph D. Darcy</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="signum(float)"></A>
+
+<H3>signum</H3>
+<PRE>
+public static float <B>signum</B>(float&nbsp;f)</PRE>
+<DL><DD>Returns the signum function of the argument; zero if the argument is zero, 1.0f if the argument is greater than zero, -1.0f if the argument is less than zero. <p>Special Cases: <ul> <li> If the argument is NaN, then the result is NaN. <li> If the argument is positive zero or negative zero, then the result is the same as the argument. </ul><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>f</CODE> - the floating-point value whose signum is to be returned</DD>
+<DT><B>Returns:</B><DD>the signum function of the argument</DD>
+<DT><B>Author:</B><DD>Joseph D. Darcy</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="sinh(double)"></A>
+
+<H3>sinh</H3>
+<PRE>
+public static double <B>sinh</B>(double&nbsp;x)</PRE>
+<DL><DD>Returns the hyperbolic sine of a <code>double</code> value. The hyperbolic sine of <i>x</i> is defined to be (<i>e<sup>x</sup>&nbsp;-&nbsp;e<sup>-x</sup></i>)/2 where <i>e</i> is <A HREF="Math#E Euler's number">Euler's number</A>. <p>Special cases: <ul> <li>If the argument is NaN, then the result is NaN. <li>If the argument is infinite, then the result is an infinity with the same sign as the argument. <li>If the argument is zero, then the result is a zero with the same sign as the argument. </ul> <p>The computed result must be within 2.5 ulps of the exact result.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>x</CODE> - The number whose hyperbolic sine is to be returned.</DD>
+<DT><B>Returns:</B><DD>The hyperbolic sine of <code>x</code>.</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="cosh(double)"></A>
+
+<H3>cosh</H3>
+<PRE>
+public static double <B>cosh</B>(double&nbsp;x)</PRE>
+<DL><DD>Returns the hyperbolic cosine of a <code>double</code> value. The hyperbolic cosine of <i>x</i> is defined to be (<i>e<sup>x</sup>&nbsp;+&nbsp;e<sup>-x</sup></i>)/2 where <i>e</i> is <A HREF="Math#E Euler's number">Euler's number</A>. <p>Special cases: <ul> <li>If the argument is NaN, then the result is NaN. <li>If the argument is infinite, then the result is positive infinity. <li>If the argument is zero, then the result is <code>1.0</code>. </ul> <p>The computed result must be within 2.5 ulps of the exact result.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>x</CODE> - The number whose hyperbolic cosine is to be returned.</DD>
+<DT><B>Returns:</B><DD>The hyperbolic cosine of <code>x</code>.</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="tanh(double)"></A>
+
+<H3>tanh</H3>
+<PRE>
+public static double <B>tanh</B>(double&nbsp;x)</PRE>
+<DL><DD>Returns the hyperbolic tangent of a <code>double</code> value. The hyperbolic tangent of <i>x</i> is defined to be (<i>e<sup>x</sup>&nbsp;-&nbsp;e<sup>-x</sup></i>)/(<i>e<sup>x</sup>&nbsp;+&nbsp;e<sup>-x</sup></i>), in other words, <A HREF="Math#sinh sinh(<i>x</i>)">sinh(<i>x</i>)</A>/<A HREF="Math#cosh cosh(<i>x</i>)">cosh(<i>x</i>)</A>. Note that the absolute value of the exact tanh is always less than 1. <p>Special cases: <ul> <li>If the argument is NaN, then the result is NaN. <li>If the argument is zero, then the result is a zero with the same sign as the argument. <li>If the argument is positive infinity, then the result is <code>+1.0</code>. <li>If the argument is negative infinity, then the result is <code>-1.0</code>. </ul> <p>The computed result must be within 2.5 ulps of the exact result. The result of <code>tanh</code> for any finite input must have an absolute value less than or equal to 1. Note that once the exact result of tanh is within 1/2 of an ulp of the limit value of &plusmn;1, correctly signed &plusmn;<code>1.0</code> should be returned.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>x</CODE> - The number whose hyperbolic tangent is to be returned.</DD>
+<DT><B>Returns:</B><DD>The hyperbolic tangent of <code>x</code>.</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="hypot(double, double)"></A>
+
+<H3>hypot</H3>
+<PRE>
+public static double <B>hypot</B>(double&nbsp;x,
+                           double&nbsp;y)</PRE>
+<DL><DD>Returns sqrt(<i>x</i><sup>2</sup>&nbsp;+<i>y</i><sup>2</sup>) without intermediate overflow or underflow. <p>Special cases: <ul> <li> If either argument is infinite, then the result is positive infinity. <li> If either argument is NaN and neither argument is infinite, then the result is NaN. </ul> <p>The computed result must be within 1 ulp of the exact result. If one parameter is held constant, the results must be semi-monotonic in the other parameter.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>x</CODE> - a value</DD>
+<DD><CODE>y</CODE> - a value</DD>
+<DT><B>Returns:</B><DD>sqrt(<i>x</i><sup>2</sup>&nbsp;+<i>y</i><sup>2</sup>) without intermediate overflow or underflow</DD>
+<DT><B>Since:</B><DD>1.5</DD>
+</DL>
+<HR>
+
+<A NAME="expm1(double)"></A>
+
+<H3>expm1</H3>
+<PRE>
+public static double <B>expm1</B>(double&nbsp;x)</PRE>
+<DL><DD>Returns <i>e</i><sup>x</sup>&nbsp;-1. Note that for values of <i>x</i> near 0, the exact sum of <code>expm1(x)</code>&nbsp;+&nbsp;1 is much closer to the true result of <i>e</i><sup>x</sup> than <code>exp(x)</code>. <p>Special cases: <ul> <li>If the argument is NaN, the result is NaN. <li>If the argument is positive infinity, then the result is positive infinity. <li>If the argument is negative infinity, then the result is -1.0. <li>If the argument is zero, then the result is a zero with the same sign as the argument. </ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic. The result of <code>expm1</code> for any finite input must be greater than or equal to <code>-1.0</code>. Note that once the exact result of <i>e</i><sup><code>x</code></sup>&nbsp;-&nbsp;1 is within 1/2 ulp of the limit value -1, <code>-1.0</code> should be returned.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>x</CODE> - the exponent to raise <i>e</i> to in the computation of <i>e</i><sup><code>x</code></sup>&nbsp;-1.</DD>
+<DT><B>Returns:</B><DD>the value <i>e</i><sup><code>x</code></sup>&nbsp;-&nbsp;1.</DD>
+</DL>
+<HR>
+
+<A NAME="log1p(double)"></A>
+
+<H3>log1p</H3>
+<PRE>
+public static double <B>log1p</B>(double&nbsp;x)</PRE>
+<DL><DD>Returns the natural logarithm of the sum of the argument and 1. Note that for small values <code>x</code>, the result of <code>log1p(x)</code> is much closer to the true result of ln(1 + <code>x</code>) than the floating-point evaluation of <code>log(1.0+x)</code>. <p>Special cases: <ul> <li>If the argument is NaN or less than -1, then the result is NaN. <li>If the argument is positive infinity, then the result is positive infinity. <li>If the argument is negative one, then the result is negative infinity. <li>If the argument is zero, then the result is a zero with the same sign as the argument. </ul> <p>The computed result must be within 1 ulp of the exact result. Results must be semi-monotonic.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>x</CODE> - a value</DD>
+<DT><B>Returns:</B><DD>the value ln(<code>x</code>&nbsp;+&nbsp;1), the natural log of <code>x</code>&nbsp;+&nbsp;1</DD>
+</DL>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,11 @@
+﻿/*các xử lý cho user*/
+
+@import url('common.css');
+
+.userView{
+	width: 900px;
+	height: auto;
+	background: #eee;
+	border: 1px solid #666;
+	margin: 0 auto;
+}

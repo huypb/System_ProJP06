@@ -1,0 +1,43 @@
+package jsoft.j2se;
+
+/**
+ * <p>Title: JP project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2012</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Huy
+ * @version 1.0
+ */
+public class Examples {
+
+  public int getMax(int n, float m, char ch) {
+    int max = n;
+
+    if (max < (int) m) {
+      max = (int) m;
+    }
+
+    if (max < ch) {
+      max = ch;
+    }
+    return max;
+  }
+
+
+  public static void main(String[] args) {
+
+    int n = (int) (Math.random() * 100);
+    float m = (float)(Math.random()*100);
+    char ch = 'j';
+
+    Examples ex = new Examples();
+
+    int max = ex.getMax(n, m, ch);
+
+    System.out.print("Gia tri lon nhat la = " + max);
+  }
+}

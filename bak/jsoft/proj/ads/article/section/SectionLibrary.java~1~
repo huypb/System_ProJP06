@@ -1,0 +1,31 @@
+package jsoft.proj.ads.article.section;
+
+import java.util.*;
+import jsoft.proj.objects.*;
+
+public class SectionLibrary {
+  public SectionLibrary() {
+  }
+
+  public static String viewSections(ArrayList items){
+    String tmp = "";
+    SectionItem item;
+
+    for (int i = 0; i < items.size(); i++) {
+      item = (SectionItem) items.get(i);
+      tmp += "<tr>";
+      tmp += "<td>" + (i + 1) + "</td>";
+      tmp += "<td>" + item.getSection_id() + "</td>";
+      tmp += "<td>" + item.getSection_name() + "</td>";
+      tmp += "<td>" + item.getSection_notes() + "</td>";
+      tmp += "<td><a href=\"#\">S\u1EEDa</a></td>";
+      tmp += "<td><a href=\"#\">Xóa</a></td>";
+      tmp += "</tr>";
+      tmp += "\n"; //sau nay bo di
+    }
+
+
+    return tmp;
+  }
+
+}

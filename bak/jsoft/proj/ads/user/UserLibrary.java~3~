@@ -1,0 +1,33 @@
+package jsoft.proj.ads.user;
+
+import java.util.*;
+import jsoft.proj.objects.*;
+
+public class UserLibrary {
+
+  public UserLibrary() {
+  }
+
+  public static String viewUsers(ArrayList items) {
+    String tmp = "";
+    UserItem item;
+    for (int i = 0; i < items.size(); i++) {
+      item = (UserItem) items.get(i);
+      tmp += "<tr>";
+      tmp += "<td>" + (i + 1) + "</td>";
+      tmp += "<td>" + item.getUser_name() + "</td>";
+      tmp += "<td>" + item.getUser_fullname() + "</td>";
+      tmp += "<td>" + item.getUser_address() + "</td>";
+      tmp += "<td>" + item.getUser_email() + "</td>";
+      tmp += "<td>" + item.getUser_birthday() + "</td>";
+      tmp += "<td>" + item.getUser_homephone() + "</td>";
+      tmp += "<td><a href=\"#\">S\u1EEDa</a></td>";
+      tmp += "<td><a href=\"#\">Xóa</a></td>";
+      tmp += "</tr>";
+      tmp += "\n"; //sau nay bo di
+    }
+
+    return tmp;
+  }
+
+}

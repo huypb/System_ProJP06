@@ -1,0 +1,19 @@
+
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<html>
+ <head><title> Trang JSP tiếp nhận dữ liệu </title></head>
+ <body>
+  <%
+   String user = request.getParameter("txtUserName");
+   if(user!=null){
+    out.println("<h1>Xin chào <i>"+user+"</i><h1>");
+   }else{
+  %>
+     <form name=“test” action=index.jsp method=get>
+		  Nhập tên của bạn :
+		  <input type=text name="txtUserName"> <p>
+		  <input type=submit value ="Gửi dữ liệu">
+     </form>
+  <%}%>
+ </body></html>
+

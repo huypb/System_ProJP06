@@ -1,0 +1,5 @@
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<%
+  String section_news = (String) session.getAttribute("section_news");
+  out.print(section_news);
+%>

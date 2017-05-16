@@ -1,0 +1,18 @@
+﻿/*Các xử lý riêng cho Login*/
+
+@import url('common.css');
+
+
+
+.loginView{
+	width: 400px;
+	height: auto;
+	
+	border: 1px solid #666;
+	background: #eee;
+	
+	margin: 0 auto;
+	
+	
+	
+}

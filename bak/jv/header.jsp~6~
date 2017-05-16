@@ -1,0 +1,43 @@
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
+<jsp:include flush="true" page="data.jsp"></jsp:include>
+
+<html>
+<head>
+<title> Bản thiểt kế cho CDHlogistics</title>
+<link href="/jv/css/layout.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/jv/js/gui.js"  type=""></script>
+<script language="JavaScript" src="/jv/js/tooltip.js"  type=""></script>
+</head>
+
+<body onLoad="setFirstTime(document.frmsearch)"> <!--gọi javascript vào đúng form -->
+<div class="mainview">
+  <!--form tìm kiếm-->
+  <div id="search">
+    <form name="frmsearch" action="" method="POST">
+    <b>Tìm kiếm</b>                                 <!-- bắt sự kiện click chuột-->
+    <input type="text" sixe="20" name="txtKeyword" onClick="setKeyword(this.form, true)" onBlur="setKeyword(this.form, false)" />
+    <input type="button" value=">>" onClick="checkKeyword(this.form)"/>
+    </form>
+  </div>
+  <!-- form đăng nhập-->
+  <div id="acc" >
+    <a href="#">Đăng nhập</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#">Đăng ký</a>
+  </div>
+
+  <!--xóa lên trên và sang trái-->
+  <div class="clr"></div>
+
+  <div class="header"></div>
+
+  <!--form menu-->
+  <div class="menu">
+    <a href="/jv/"><h3>Trang chủ</h3></a>
+    <a href="/jv/Gioi-thieu/"><h3>Giới thiệu</h3></a>
+    <a href="/jv/San-pham/"><h3>Sản phẩm</h3></a>
+    <a href="/jv/Khach-hang/"><h3>Khách hàng</h3></a>
+    <a href="/jv/Tin-tuc/"><h3>Tin tức</h3></a>
+    <a href="/jv/Ho-tro/"><h3>Hỗ trợ</h3></a>
+    <a href="jv/Lien-he/"><h3>Liên hệ</h3></a>
+  </div>

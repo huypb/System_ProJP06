@@ -1,0 +1,69 @@
+﻿/*xu ly giao dien*/
+@import url('common.css');
+
+#main{
+	width: 1200px;
+	height: auto;
+	margin: 5px auto;
+}
+
+#logo{
+	width: 600px;
+	height: 60px;
+	background: orange;
+	float: left;
+}
+
+
+#acc{
+	width:400px;
+	height:60px;
+	background: #eee;
+	float:right;
+}
+
+#acc h3{
+	padding :5px;
+	background: #666;
+	color: #fff;
+	font: bold 12px Tahoma;
+	margin-bottom: 10px;
+}
+
+.menu{
+	width:200px;
+	background: #eee;
+	height:auto;
+	float: left;
+	margin: 5px 0;
+}
+
+.menu h3{
+	padding: 10px;
+	text-align: justify;
+	font: bold 12px Tahoma;
+	color: #44f;
+	border-bottom: 1px solid #ddd;
+}
+
+.menu h3:hover{
+	background:#66f;
+	color:#fff;
+}
+
+.view{
+	width: 990px;
+	height: auto;
+	background:#eee;
+	float:right;
+	margin: 5px 0;
+}
+
+
+
+#footer{
+	height: auto;
+	background: #666;
+	color: #fff;
+	padding : 10px;
+}

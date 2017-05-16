@@ -1,0 +1,96 @@
+package jsoft.proj.ads.main;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import java.util.*;
+import jsoft.proj.objects.*;
+
+public class View extends HttpServlet {
+  private static final String CONTENT_TYPE = "text/html; charset=UTF-8";
+
+  //Initialize global variables
+  public void init() throws ServletException {
+  }
+
+  //Process the HTTP Get request
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    //tham chieu phien lam viec
+    HttpSession session = request.getSession();
+
+    //kiem tra thong tin dang nhap
+    UserItem user = (UserItem) session.getAttribute("userLogined");
+
+    if (user != null) {
+      view(request, response);
+    } else {
+      response.sendRedirect("/adv/user/login");
+    }
+
+  }
+
+  private void view(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    response.setContentType(CONTENT_TYPE);
+    PrintWriter out = response.getWriter();
+
+    out.print("<html>");
+    out.print("<head>");
+    out.print("<title>Qu\u1EA3n tr\u1ECB h\u1EC7 th\u1ED1ng</title>");
+    out.print("<link href=\"adcss/layout.css\" rel=\"stylesheet\" type=\"text/css\"  />");
+    out.print("<script language=\"JavaScript\" src=\"\" ></script>");
+    out.print("</head>");
+    out.print("");
+    out.print("<body>");
+    out.print("<div id=\"main\">");
+    out.print("<div id=\"logo\"></div>");
+    out.print("		");
+    out.print("<div id=\"acc\">");
+    out.print("<h3>Quy\u1EC1n qu\u1EA3n tr\u1ECB</h3>");
+    out.print("Tên \u0111\u0103ng nh\u1EADp: admin &nbsp;&nbsp;|&nbsp;&nbsp;");
+    out.print("<a href=\"#\">Thoát</a>");
+    out.print("</div>");
+    out.print("			");
+    out.print("<div class=\"clr\"></div>");
+    out.print("			");
+    out.print("<div class=\"menu\">");
+    out.print("<a href=\"#\"><h3>Th\u1ED1ng kê</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Ng\u01B0\u1EDDi s\u1EED d\u1EE5ng</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Chuyên m\u1EE5c</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Th\u1EC3 lo\u1EA1i</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Tin bài</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý H\u1EC7 s\u1EA3n ph\u1EA9m</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Nhóm s\u1EA3n ph\u1EA9m</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Lo\u1EA1i s\u1EA3n ph\u1EA9m</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý S\u1EA3n ph\u1EA9m</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Hóa \u0111\u01A1n</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý Khách hàng</h3></a>");
+    out.print("<a href=\"#\"><h3>Qu\u1EA3n lý ...</h3></a>");
+    out.print("</div><!--end menu-->");
+    out.print("			");
+    out.print("<div class=\"view\">");
+    out.print("<!--Noi dung thay doi-->");
+    out.print("</div><!--end view-->");
+    out.print("			");
+    out.print("<div class=\"clr\"></div>	");
+    out.print("			");
+    out.print("<div id=\"footer\">");
+    out.print("This CMS is build by JP06 group.<br />");
+    out.print("Develop on J2EE technology . @2013");
+    out.print("</div>");
+    out.print("</div>");
+    out.print("</body>");
+    out.print("</html>");
+
+    out.close();
+
+  }
+
+  //Process the HTTP Post request
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    doGet(request, response);
+  }
+
+  //Clean up resources
+  public void destroy() {
+  }
+}

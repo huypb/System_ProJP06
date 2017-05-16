@@ -1,0 +1,26 @@
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<div class="clr"></div>
+<div class="links">
+
+  <div class="slider-wrapper theme-default">
+    <div id="slider1" class="nivoSlider">
+      <a href="#"><img src="/jv/pictures/intro10.jpg" alt="" title="Ốp bếp với sản phẩm gạch viền, gạch điểm thân quen và độc đáo." /></a>
+      <a href="#"><img src="/jv/pictures/intro9.jpg" alt="" title="Lát nền cho những không gian phòng chờ lớn" /></a>
+      <a href="#"><img src="/jv/pictures/intro8.jpg" alt="" title="Phòng khách sang trọng, thoáng đãng" /></a>
+      <a href="#"><img src="/jv/pictures/intro7.jpg" alt="" title="Ốp lát tạo sự sang trọng cho phòng tắm của bạn" /></a>
+      <a href="#"><img src="/jv/pictures/intro6.jpg" alt="" title="Lát nền sân vườn, nơi bạn tận hưởng cảm giác thiên nhiên thực sự" /></a>
+      <a href="#"><img src="/jv/pictures/intro5.jpg" alt="" title="Lát nền cho những không gian ngoài trời" /></a>
+      <a href="#"><img src="/jv/pictures/intro4.jpg" alt="" title="Lát nền có gam màu đi cùng với nội thất" /></a>
+      <a href="#"><img src="/jv/pictures/intro3.jpg" alt="" title="Lát nền phòng ngủ với những sắc màu ấm cúng"   data-transition="slideInLeft"/></a>
+      <a href="#"><img src="/jv/pictures/intro2.jpg" alt="" title="Lát nền cho những không gian phòng chờ lớn" /></a>
+    </div>
+  </div><!--End .slider-wrapper-->
+
+  <script language="javascript" type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script language="javascript" type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript">
+  $(window).load(function() {
+    $('#slider1').nivoSlider();
+  });
+  </script>
+  </div>

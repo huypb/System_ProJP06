@@ -1,0 +1,51 @@
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<div class="rview">
+  <div class="title1" >
+    <a href="#"><h3>Tin mới nhất</h3></a>
+  </div>
+
+
+
+  <!--form slide show-->
+  <div id="slider-marquee" >
+    <!--hiệu ứng chạy từ dưới lên, delay 50s, chạy 2px/lần , di chuột vào thì dừng, bỏ chuột ra thì chạy-->
+    <marquee direction="up" scrolldelay="50" scrollamount="2" onMouseOver="stop()" onMouseOut="start()">
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"   alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+      <a href="#">
+        <h3>
+        <img src="/jv/pictures/noisoi.jpg"  alt=""/>
+        Hơn 100 triệu đồng đến với hai anh em bị bỏng rơm
+        </h3>
+      </a>
+    </marquee>
+  </div>
+</div>
